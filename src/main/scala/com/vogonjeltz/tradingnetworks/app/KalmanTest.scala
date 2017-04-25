@@ -1,10 +1,11 @@
 package com.vogonjeltz.tradingnetworks.app
 
 import breeze.linalg._
-import breeze.stats._
+//import breeze.stats._
 import breeze.plot._
+import com.vogonjeltz.tradingnetworks.lib.StockHistory
 import scala.util.Random
-import com.vogonjeltz.tradingnetworks.lib.kalman.{FilterTracking, KalmanFilter, StocksFilter}
+import com.vogonjeltz.tradingnetworks.lib.kalman._
 
 import scala.collection.mutable.ListBuffer
 
@@ -13,15 +14,134 @@ import scala.collection.mutable.ListBuffer
   */
 object KalmanTest extends App {
 
-  val STOCKS = List("III","ADN","ADM","AAL","ANTO","AHT","ABF","AZN","AV.","BAB","BA.","BARC","BDEV","BLT","BP.","BATS","BLND","BT.A","BNZL","BRBY","CPI","CCL","CNA","CCH","CPG","CRH","DCC","DGE","DLG","EZJ","EXPN","FRES","GKN","GSK","GLEN","HMSO","HL.","HIK","HSBA","IMB","ISAT","IHG","IAG","ITRK","INTU","ITV","JMAT","KGF","LAND","LGEN","LLOY","LSE","MKS","MERL","MNDI","NG.","NXT","OML","PSON","PSN","PFG","PRU","RRS","RB.","REL","RIO","RR.","RBS","RDSA","RMG","RSA","SGE","SBRY","SDR","SVT","SHP","SKY","SN.","SMIN","SPD","SSE","STAN","SL.","STJ","TW.","TSCO","TPK","TUI","ULVR","UU.","VOD","WTB","WOS","WPG","WPP")
+  val STOCKS = List("III","ADN","ADM","AAL","ANTO","AHT","ABF","AZN","AV.","BAB","BA.","BARC","BDEV","BLT","BP.","BATS","BLND","BT.A","BNZL","BRBY","CPI","CCL","CNA","CCH","CPG","CRH","DCC","DGE","DLG","EZJ","EXPN","FRES","GKN","GSK","GLEN","HMSO","HL.","HIK","HSBA","IMB","ISAT","IHG","IAG","ITRK","INTU","ITV","JMAT","KGF","LAND","LGEN","LLOY","LSE","MKS","MERL","MNDI","NG.","NXT","OML","PSON","PSN","PFG","PRU","RRS","RB.","REL","RIO","RR.","RBS","RDSA","RMG","RSA","SGE","SBRY","SDR","SVT","SHP","SKY","SN.","SMIN","SPD","SSE","STAN","SL.","STJ","TW.","TSCO","TPK","TUI","ULVR","UU.","VOD","WTB","WOS","WPG","WPP","ATVI","ADBE","AKAM","ALXN","GOOG","GOOGL","AMZN","AAL","AMGN","ADI","AAPL","AMAT","ADSK","ADP","BIDU","BIIB","BMRN","AVGO","CA","CELG","CERN","CHTR","CHKP","CTAS","CSCO","CTXS","CTSH","CMCSA","COST","CSX","CTRP","XRAY","DISCA","DISCK","DISH","DLTR","EBAY","EA","EXPE","ESRX","FB","FAST","FISV","GILD","HAS","HSIC","HOLX","IDXX","ILMN","INCY","INTC","INTU","ISRG","JBHT","JD","KLAC","LRCX","LBTYA","LBTYK","LILA","LILAK","LVNTA","QVCA","MAT","MXIM","MCHP","MU","MSFT","MDLZ","MNST","MYL","NTES","NFLX","NCLH","NVDA","ORLY","PCAR","PAYX","PYPL","QCOM","REGN","ROST","SHPG","SIRI","SWKS","SBUX","SYMC","TMUS","TSLA","TXN","KHC","PCLN","TSCO","TRIP","FOXA","ULTA","VRSK","VRTX","VIAB","VOD","WBA","WDC","XLNX","YHOO")
   val stockData = STOCKS.map(X => new StockHistory(Utils.readStock(X)))
   val trainingData = stockData.map(_.take(10))
   val testData = stockData.map(_.drop(10))
+  println(testData.map(_.length).sum / testData.length.toDouble)
+
+  println(STOCKS(59))
+
+  val qs = ListBuffer[Double]()
+  val rs = ListBuffer[Double]()
+
+
+  val pls = ListBuffer[Double]()
+
+  for ((stock, i) <- stockData.zipWithIndex) {
+
+    val predictor = new KalmanPredictor(stock.take(100), ct = 0)
+    qs.append(predictor.q)
+    rs.append(predictor.r)
+    val pl = predictor.test(stock.drop(100))
+    println(STOCKS(i))
+    pls.append(pl.last)
+
+    if (pl.last > 200) println(s"High profits on ${STOCKS(i)} (${pl.last})")
+
+  }
+
+  println(s"Test over ${STOCKS.length} stocks")
+  println(s"Average profit: ${pls.map(_ - 100).sum / pls.length}")
+
+  val fig1 = Figure()
+  val plot_0 = fig1.subplot(0)
+  val plot_0_hist = fig1.subplot(2,1,1)
+  val plot_0_1 = fig1.subplot(3,1,2)
+  plot_0 += plot(new DenseVector[Double](pls.indices.map(_.toDouble).toArray), new DenseVector[Double](pls.map(_ - 100).toArray), '-', tips = (i) => STOCKS(i))
+  plot_0 += plot(new DenseVector[Double](pls.indices.map(_.toDouble).toArray), new DenseVector[Double](Array.fill(pls.length)(0d)))
+  plot_0_hist += hist(new DenseVector[Double](pls.toArray.map(_ - 100d)), HistogramBins.fromRange(-150, 150, 150))
+  //plot_1 += plot(new DenseVector[Double](qs.toArray), new DenseVector[Double](rs.toArray), '+', labels = (i: Int) => STOCKS(i))
+  plot_0_1 += plot(new DenseVector[Double](qs.toArray), new DenseVector[Double](rs.toArray), '+')
+
+  plot_0.xlabel = "Stock"
+  plot_0.ylabel = "Profit %"
+
+  plot_0_hist.xlabel = "Profit %"
+  plot_0_hist.ylabel = "Frequency"
+
+  plot_0_1.xlabel = "q"
+  plot_0_1.ylabel = "r"
+
+  plot_0_hist.xlim(-150, 150)
+  /*
+  val stock = Random.shuffle(stockData).head
+  val predictor = new KalmanPredictor(stock.take(100))
+  val pl = predictor.test(stock.drop(100))
+
+  val fig = Figure()
+  val plot_0 = fig.subplot(0)
+  plot_0 += plot(new DenseVector[Double](pl.indices.map(_.toDouble).toArray), new DenseVector[Double](pl.toArray))
+*/
+
+  /*
+  for (stock <- stockData) {
+    println(stockData.indexOf(stock))
+    new StocksOptimizer(List(0.0, 0.1), 1 to 10, stock, 10)
+    val optimizer = new StocksOptimizer((0 to 200).map(_/400d),(0 to 200).map(_/200d), stock, 10)
+    val res = optimizer.optimize()
+    qs.append(res._1)
+    rs.append(res._2)
+  }
+
+  val fig = Figure()
+  val plot_0 = fig.subplot(0)
+
+  plot_0 += plot(new DenseVector[Double](qs.toArray), new DenseVector[Double](rs.toArray), '+', labels = (i: Int) => STOCKS(i))
+  plot_0.xlabel = "q"
+  plot_0.ylabel = "r"
+  plot_0.xlim = (0, 0.5)
+  */
 
   /*
   var bestq, bestr, bestPL = 0d
+  var bestqs: ListBuffer[Double] = ListBuffer()
+  var bestpls: ListBuffer[Double] = ListBuffer()
 
-  for (q <- (1 to 200).map(_/100000d)) {
+  for (q <- (1 to 250).map(_/50000d)) {
+
+    println(q)
+
+    var qBestr = 0d
+    var qBestPL = 0d
+
+    for (r <- (1 to 40).map(_/40d)) {
+
+      val pnls = new ListBuffer[Double]()
+      for (i <- STOCKS.indices) {
+        val filter = new StocksFilter(q, r, trainingData(i))
+        filter.train()
+        pnls.append(filter.test(testData(i)).last - 100d)
+      }
+
+      if (pnls.sum / pnls.length > qBestPL) {
+        qBestPL = pnls.sum / pnls.length
+        qBestr = r
+        //println(s"q -> $q, r -> $qBestr, PL: $qBestPL")
+      }
+
+    }
+
+    if (qBestPL > bestPL) {
+      bestq = q
+      bestr = qBestr
+      bestPL = qBestPL
+      println(s"q -> $bestq, r -> $bestr, PL: $bestPL")
+    }
+
+    bestqs.append(q)
+    bestpls.append(qBestPL)
+
+  }
+
+  val fig = Figure()
+  val plot_0 = fig.subplot(0)
+
+  plot_0 += plot(new DenseVector[Double](bestqs.toArray), new DenseVector[Double](bestpls.toArray))
+*/
+
+
+  /*for (q <- (1 to 200).map(_/100000d)) {
     println(s"q -> $q")
 
     var qBestr = 0d
@@ -51,11 +171,13 @@ object KalmanTest extends App {
   }
   val q = bestq
   val r = bestr
-  */
 
 
-  val q = 0.1
-  val r = 0.9
+
+  //TODO: Clean up kalman filter to separate prediction from actual calculations of error/ecv
+
+  /*val q = 0.00162
+  val r = 0.7*/
 
   val fig = Figure()
   val plot_0 = fig.subplot(0)
@@ -68,7 +190,7 @@ object KalmanTest extends App {
     plot_0 += plot(new DenseVector[Double](stockData(i).openings.indices.map(_.toDouble).toArray), new DenseVector[Double](stockData(i).openings.toArray))
   }
   //plot_0 += plot(new DenseVector[Double](pnl.indices.map(_.toDouble).toArray), new DenseVector[Double](pnl.toArray))
-
+  */
 
   /*
   val pnls = new ListBuffer[Double]()

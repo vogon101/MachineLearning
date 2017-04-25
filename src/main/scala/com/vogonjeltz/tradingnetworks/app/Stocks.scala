@@ -1,5 +1,6 @@
 package com.vogonjeltz.tradingnetworks.app
 
+import com.vogonjeltz.tradingnetworks.lib.StockHistory
 import com.vogonjeltz.tradingnetworks.lib.networks.{NeuralNetwork, Vect}
 import com.vogonjeltz.tradingnetworks.lib.networks.evolution.{EvolutionCoordinator, EvolutionSettings}
 import com.vogonjeltz.tradingnetworks.lib.networks.{Matrix, NeuralNetwork, Vect}

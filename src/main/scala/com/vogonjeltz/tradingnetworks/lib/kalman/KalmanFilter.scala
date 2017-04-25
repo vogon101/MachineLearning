@@ -7,25 +7,51 @@ import scala.collection.mutable.ListBuffer
   *
   * Created by fredd
   */
-class KalmanFilter (private var _state: KalmanState) {
+class KalmanFilter (val predictionStep: (KalmanState) => KalmanState, protected var _state: KalmanState) {
 
-  def this(q: Double, r: Double, initialX: Double, initialP: Double) = this(new KalmanState(q, r, initialX, initialP))
+  def state: KalmanState = _state
 
-  def state = _state
+  def predict(): KalmanState = {
+    _state = predictionStep(state)
+    state
+  }
 
-  def tick(z: Double): KalmanState = {
-
+  def update(signal: Double): KalmanState = {
     val xi = state.x
-    val pi = state.p + state.Q
+    val pi = state.p
 
     val K = pi / (pi + state.R)
-    val xk = xi + K * (z - xi)
+    val xk = xi + K * (signal - xi)
     val pk = (1 - K) * pi
 
     _state = state.nextTick(xk, pk)
-    state
 
+    state
   }
+
+  def tick(signal: Double): KalmanState = {
+    predict()
+    update(signal)
+  }
+
+}
+
+object KalmanFilter {
+
+  def apply(prediction: (KalmanState) => KalmanState)(state: KalmanState):KalmanFilter =
+    new KalmanFilter(prediction, state)
+
+}
+
+/**
+  * Kalman filter that uses simple time based prediction, effectively no model
+  */
+class SimplePredictionKalmanFilter (initialSate: KalmanState)
+  extends KalmanFilter(SimplePredictionKalmanFilter.simplePredictionFunction, initialSate)
+
+object SimplePredictionKalmanFilter {
+
+  val simplePredictionFunction: (KalmanState) => KalmanState = (s) => s.nextTick(s.x, s.p + s.Q)
 
 }
 
@@ -34,10 +60,10 @@ trait FilterTracking extends KalmanFilter {
   private val _xs: ListBuffer[Double] = ListBuffer()
   private val _ps: ListBuffer[Double] = ListBuffer()
 
-  override def tick(z: Double): KalmanState = {
-    super.tick(z)
+  override def update(z: Double): KalmanState = {
     _xs.append(state.x)
     _ps.append(state.p)
+    super.update(z)
     state
   }
 

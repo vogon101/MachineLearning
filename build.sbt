@@ -19,4 +19,4 @@ libraryDependencies  ++= Seq(
   "org.scalanlp" %% "breeze-viz" % "0.13"
 )
 
-mainClass in (Compile, run) := Some("com.vogonjeltz.tradingnetworks.app.KalmanTest")
+mainClass in (Compile, run) := Some("com.vogonjeltz.tradingnetworks.app.MatrixTest")

@@ -1,10 +1,586 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/KalmanTest.scala" line="192" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/KalmanTest.scala" line="377" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5fb2cd8-ded3-411e-8123-2797806180e0" name="Default" comment="" />
+    <list default="true" id="e5fb2cd8-ded3-411e-8123-2797806180e0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/MatrixTest.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/StocksPredictor.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanPredictor.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/MatrixKalman/MatrixFilter.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/MatrixKalman/MatrixKalmanState.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/StocksOptimizer.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/utils/MatrixUtils.scala" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$c8cd878cdada9d3cf739$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$c8cd878cdada9d3cf739$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$c8cd878cdada9d3cf739.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$c8cd878cdada9d3cf739.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$428325dae6e207101c02$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$428325dae6e207101c02$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$428325dae6e207101c02.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$428325dae6e207101c02.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$5b97236e1f0e900fb8a6$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$5b97236e1f0e900fb8a6$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$5b97236e1f0e900fb8a6.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$5b97236e1f0e900fb8a6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ae818704d16baaff868c$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ae818704d16baaff868c$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ae818704d16baaff868c.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ae818704d16baaff868c.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c9b574b67f40f23f8b23$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c9b574b67f40f23f8b23$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c9b574b67f40f23f8b23.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c9b574b67f40f23f8b23.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ded22df04c77ca1d19cf$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ded22df04c77ca1d19cf$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ded22df04c77ca1d19cf.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ded22df04c77ca1d19cf.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/default/tradingnetworks$sbt_2.10/1.0/resolved.xml.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/default/tradingnetworks$sbt_2.10/1.0/resolved.xml.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/default/tradingnetworks$sources_2.10/1.0/resolved.xml.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/default/tradingnetworks$sources_2.10/1.0/resolved.xml.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/default/tradingnetworks$sources_2.12/1.0/resolved.xml.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/default/tradingnetworks$sources_2.12/1.0/resolved.xml.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sbt_2.10-default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.10-default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.12-compile-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.12-compile.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.12-docs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.12-optional.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.12-plugin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.12-pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.12-provided.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.12-runtime-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.12-runtime.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.12-scala-tool.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.12-sources.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.12-test-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks$sources_2.12-test.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (1).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (10).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (100).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (11).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (12).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (13).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (14).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (15).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (16).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (17).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (18).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (19).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (2).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (20).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (21).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (22).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (23).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (24).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (25).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (26).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (27).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (28).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (29).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (3).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (30).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (31).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (32).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (33).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (34).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (35).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (36).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (37).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (38).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (39).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (4).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (40).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (41).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (42).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (43).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (44).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (45).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (46).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (47).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (48).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (49).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (5).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (50).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (51).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (52).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (53).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (54).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (55).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (56).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (57).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (58).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (59).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (6).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (60).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (61).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (62).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (63).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (64).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (65).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (66).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (67).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (68).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (69).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (7).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (70).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (71).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (72).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (73).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (74).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (75).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (76).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (77).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (78).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (79).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (8).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (80).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (81).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (82).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (83).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (84).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (85).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (86).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (87).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (88).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (89).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (9).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (90).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (91).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (92).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (93).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (94).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (95).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (96).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (97).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (98).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest (99).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (1).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (10).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (100).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (11).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (12).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (13).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (14).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (15).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (16).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (17).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (18).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (19).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (2).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (20).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (21).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (22).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (23).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (24).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (25).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (26).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (27).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (28).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (29).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (3).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (30).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (31).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (32).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (33).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (34).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (35).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (36).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (37).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (38).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (39).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (4).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (40).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (41).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (42).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (43).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (44).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (45).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (46).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (47).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (48).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (49).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (5).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (50).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (51).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (52).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (53).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (54).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (55).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (56).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (57).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (58).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (59).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (6).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (60).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (61).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (62).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (63).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (64).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (65).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (66).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (67).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (68).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (69).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (7).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (70).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (71).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (72).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (73).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (74).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (75).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (76).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (77).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (78).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (79).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (8).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (80).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (81).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (82).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (83).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (84).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (85).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (86).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (87).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (88).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (89).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (9).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (90).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (91).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (92).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (93).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (94).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (95).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (96).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (97).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (98).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$ (99).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (1).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (10).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (100).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (11).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (12).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (13).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (14).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (15).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (16).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (17).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (18).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (19).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (2).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (20).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (21).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (22).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (23).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (24).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (25).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (26).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (27).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (28).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (29).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (3).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (30).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (31).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (32).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (33).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (34).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (35).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (36).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (37).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (38).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (39).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (4).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (40).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (41).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (42).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (43).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (44).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (45).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (46).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (47).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (48).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (49).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (5).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (50).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (51).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (52).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (53).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (54).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (55).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (56).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (57).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (58).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (59).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (6).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (60).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (61).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (62).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (63).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (64).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (65).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (66).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (67).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (68).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (69).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (7).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (70).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (71).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (72).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (73).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (74).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (75).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (76).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (77).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (78).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (79).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (8).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (80).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (81).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (82).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (83).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (84).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (85).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (86).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (87).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (88).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (89).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (9).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (90).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (91).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (92).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (93).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (94).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (95).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (96).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (97).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (98).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body (99).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/KalmanTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/StockHistory (1).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/StockHistory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/Stocks$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/Stocks$delayedInit$body.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/Stocks.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/Tests$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/Tests.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/Utils$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/app/Utils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/kalman/FilterTracking.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/kalman/KalmanFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/kalman/KalmanState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter (1).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter (2).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter (3).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter (4).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter (5).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter (6).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter (7).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter (8).class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/networks/ImmutableMatrix.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/networks/Matrix$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/networks/Matrix.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/networks/MutableMatrix.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/networks/NeuralNetwork.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/networks/Vect$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/networks/Vect.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/networks/evolution/EvolutionCoordinator$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/networks/evolution/EvolutionCoordinator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/networks/evolution/EvolutionSettings$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/networks/evolution/EvolutionSettings.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com (1)/vogonjeltz/tradingnetworks/lib/networks/evolution/Generation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/app/StockHistory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/$global/$global/discoveredMainClasses/data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/mainClass/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/unmanagedClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/unmanagedJars/$global/streams/export" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/StockHistory.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/StockHistory.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/inputs" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/inputs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/app/KalmanTest$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/app/KalmanTest$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/app/KalmanTest$delayedInit$body.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/app/KalmanTest.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/app/KalmanTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/app/Stocks$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/app/Stocks$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/app/Stocks$delayedInit$body.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/app/Stocks$delayedInit$body.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/app/Stocks.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/app/Stocks.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/lib/kalman/FilterTracking.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/lib/kalman/FilterTracking.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanFilter.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanState.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/com/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/tradingnetworks-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/tradingnetworks-build.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/tradingnetworks.iml" afterPath="$PROJECT_DIR$/.idea/modules/tradingnetworks.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/AAL.csv" afterPath="$PROJECT_DIR$/data/AAL.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/AAPL.csv" afterPath="$PROJECT_DIR$/data/AAPL.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ABF.csv" afterPath="$PROJECT_DIR$/data/ABF.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ADM.csv" afterPath="$PROJECT_DIR$/data/ADM.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ADN.csv" afterPath="$PROJECT_DIR$/data/ADN.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/AHT.csv" afterPath="$PROJECT_DIR$/data/AHT.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ANTO.csv" afterPath="$PROJECT_DIR$/data/ANTO.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/AV..csv" afterPath="$PROJECT_DIR$/data/AV..csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/AZN.csv" afterPath="$PROJECT_DIR$/data/AZN.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/BA..csv" afterPath="$PROJECT_DIR$/data/BA..csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/BAB.csv" afterPath="$PROJECT_DIR$/data/BAB.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/BARC.csv" afterPath="$PROJECT_DIR$/data/BARC.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/BATS.csv" afterPath="$PROJECT_DIR$/data/BATS.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/BDEV.csv" afterPath="$PROJECT_DIR$/data/BDEV.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/BLND.csv" afterPath="$PROJECT_DIR$/data/BLND.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/BLT.csv" afterPath="$PROJECT_DIR$/data/BLT.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/BNZL.csv" afterPath="$PROJECT_DIR$/data/BNZL.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/BP..csv" afterPath="$PROJECT_DIR$/data/BP..csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/BRBY.csv" afterPath="$PROJECT_DIR$/data/BRBY.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/BT.A.csv" afterPath="$PROJECT_DIR$/data/BT.A.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/CCH.csv" afterPath="$PROJECT_DIR$/data/CCH.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/CCL.csv" afterPath="$PROJECT_DIR$/data/CCL.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/CNA.csv" afterPath="$PROJECT_DIR$/data/CNA.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/CPG.csv" afterPath="$PROJECT_DIR$/data/CPG.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/CPI.csv" afterPath="$PROJECT_DIR$/data/CPI.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/CRH.csv" afterPath="$PROJECT_DIR$/data/CRH.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DCC.csv" afterPath="$PROJECT_DIR$/data/DCC.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DGE.csv" afterPath="$PROJECT_DIR$/data/DGE.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DLG.csv" afterPath="$PROJECT_DIR$/data/DLG.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/EXPN.csv" afterPath="$PROJECT_DIR$/data/EXPN.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/EZJ.csv" afterPath="$PROJECT_DIR$/data/EZJ.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/FRES.csv" afterPath="$PROJECT_DIR$/data/FRES.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/GKN.csv" afterPath="$PROJECT_DIR$/data/GKN.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/GLEN.csv" afterPath="$PROJECT_DIR$/data/GLEN.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/GOOGL.csv" afterPath="$PROJECT_DIR$/data/GOOGL.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/GSK.csv" afterPath="$PROJECT_DIR$/data/GSK.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/HIK.csv" afterPath="$PROJECT_DIR$/data/HIK.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/HL..csv" afterPath="$PROJECT_DIR$/data/HL..csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/HMSO.csv" afterPath="$PROJECT_DIR$/data/HMSO.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/HSBA.csv" afterPath="$PROJECT_DIR$/data/HSBA.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/IAG.csv" afterPath="$PROJECT_DIR$/data/IAG.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/IHG.csv" afterPath="$PROJECT_DIR$/data/IHG.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/III.csv" afterPath="$PROJECT_DIR$/data/III.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/IMB.csv" afterPath="$PROJECT_DIR$/data/IMB.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/INTU.csv" afterPath="$PROJECT_DIR$/data/INTU.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ISAT.csv" afterPath="$PROJECT_DIR$/data/ISAT.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ITRK.csv" afterPath="$PROJECT_DIR$/data/ITRK.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ITV.csv" afterPath="$PROJECT_DIR$/data/ITV.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/JMAT.csv" afterPath="$PROJECT_DIR$/data/JMAT.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/KGF.csv" afterPath="$PROJECT_DIR$/data/KGF.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/LAND.csv" afterPath="$PROJECT_DIR$/data/LAND.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/LGEN.csv" afterPath="$PROJECT_DIR$/data/LGEN.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/LLOY.csv" afterPath="$PROJECT_DIR$/data/LLOY.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/LSE.csv" afterPath="$PROJECT_DIR$/data/LSE.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/MERL.csv" afterPath="$PROJECT_DIR$/data/MERL.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/MKS.csv" afterPath="$PROJECT_DIR$/data/MKS.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/MNDI.csv" afterPath="$PROJECT_DIR$/data/MNDI.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/NG..csv" afterPath="$PROJECT_DIR$/data/NG..csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/NXT.csv" afterPath="$PROJECT_DIR$/data/NXT.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/OML.csv" afterPath="$PROJECT_DIR$/data/OML.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/PFG.csv" afterPath="$PROJECT_DIR$/data/PFG.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/PRU.csv" afterPath="$PROJECT_DIR$/data/PRU.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/PSN.csv" afterPath="$PROJECT_DIR$/data/PSN.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/PSON.csv" afterPath="$PROJECT_DIR$/data/PSON.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/RB..csv" afterPath="$PROJECT_DIR$/data/RB..csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/RBS.csv" afterPath="$PROJECT_DIR$/data/RBS.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/RDSA.csv" afterPath="$PROJECT_DIR$/data/RDSA.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/REL.csv" afterPath="$PROJECT_DIR$/data/REL.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/RIO.csv" afterPath="$PROJECT_DIR$/data/RIO.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/RMG.csv" afterPath="$PROJECT_DIR$/data/RMG.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/RR..csv" afterPath="$PROJECT_DIR$/data/RR..csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/RRS.csv" afterPath="$PROJECT_DIR$/data/RRS.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/RSA.csv" afterPath="$PROJECT_DIR$/data/RSA.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SBRY.csv" afterPath="$PROJECT_DIR$/data/SBRY.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SDR.csv" afterPath="$PROJECT_DIR$/data/SDR.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SGE.csv" afterPath="$PROJECT_DIR$/data/SGE.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SHP.csv" afterPath="$PROJECT_DIR$/data/SHP.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SKY.csv" afterPath="$PROJECT_DIR$/data/SKY.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SL..csv" afterPath="$PROJECT_DIR$/data/SL..csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SMIN.csv" afterPath="$PROJECT_DIR$/data/SMIN.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SN..csv" afterPath="$PROJECT_DIR$/data/SN..csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SPD.csv" afterPath="$PROJECT_DIR$/data/SPD.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SSE.csv" afterPath="$PROJECT_DIR$/data/SSE.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/STAN.csv" afterPath="$PROJECT_DIR$/data/STAN.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/STJ.csv" afterPath="$PROJECT_DIR$/data/STJ.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SVT.csv" afterPath="$PROJECT_DIR$/data/SVT.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/TPK.csv" afterPath="$PROJECT_DIR$/data/TPK.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/TSCO.csv" afterPath="$PROJECT_DIR$/data/TSCO.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/TUI.csv" afterPath="$PROJECT_DIR$/data/TUI.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/TW..csv" afterPath="$PROJECT_DIR$/data/TW..csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ULVR.csv" afterPath="$PROJECT_DIR$/data/ULVR.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/UU..csv" afterPath="$PROJECT_DIR$/data/UU..csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/VOD.csv" afterPath="$PROJECT_DIR$/data/VOD.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/WOS.csv" afterPath="$PROJECT_DIR$/data/WOS.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/WPG.csv" afterPath="$PROJECT_DIR$/data/WPG.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/WPP.csv" afterPath="$PROJECT_DIR$/data/WPP.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/WTB.csv" afterPath="$PROJECT_DIR$/data/WTB.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/get_stock.py" afterPath="$PROJECT_DIR$/data/get_stock.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/tradingnetworks-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/tradingnetworks-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/tradingnetworks-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/tradingnetworks-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-docs.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-sources.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-sources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-test.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-tradingnetworks-build-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/KalmanTest.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/KalmanTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Stocks.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Stocks.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanFilter.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanFilter.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanState.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanState.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/tradingnetworks_2.12/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/tradingnetworks_2.12/1.0/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/tradingnetworks_2.12/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/tradingnetworks_2.12/1.0/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-sources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-tradingnetworks_2.12-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/exportedProducts/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/run/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/run/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/dependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/fullClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/internalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -27,6 +603,26 @@
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="KalmanFilter.scala" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanFilter.scala">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="64">
+                    <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -45,12 +641,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="KalmanTest.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/KalmanTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+              <folding>
+                <element signature="e#44#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Utils.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Stocks.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Stocks.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="31" column="619" lean-forward="false" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="619" />
-              <folding />
+            <state relative-caret-position="-783">
+              <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+              <folding>
+                <element signature="e#44#98#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatrixFilter.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/MatrixKalman/MatrixFilter.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+              <folding>
+                <element signature="e#64#86#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,79 +691,59 @@
         <entry file="file://$PROJECT_DIR$/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="84" lean-forward="false" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
+              <caret line="21" column="84" lean-forward="true" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KalmanTest.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/KalmanTest.scala">
+      <file leaf-file-name="StocksPredictor.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/StocksPredictor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+            <state relative-caret-position="208">
+              <caret line="50" column="32" lean-forward="false" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatrixUtils.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/utils/MatrixUtils.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatrixTest.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/MatrixTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="19" column="87" lean-forward="false" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
               <folding>
-                <element signature="e#44#66#0" expanded="true" />
+                <element signature="e#44#76#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StocksFilter.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter.scala">
+      <file leaf-file-name="MatrixKalmanState.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/MatrixKalman/MatrixKalmanState.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="80" lean-forward="false" selection-start-line="11" selection-start-column="80" selection-end-line="11" selection-end-column="80" />
+            <state relative-caret-position="289">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KalmanFilter.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanFilter.scala">
+      <file leaf-file-name="KalmanPredictor.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanPredictor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="639">
-              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KalmanState.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanState.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="73" lean-forward="false" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockHistory.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/StockHistory.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EvolutionCoordinator.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/evolution/EvolutionCoordinator.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="51" lean-forward="false" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Generation.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/evolution/Generation.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="51" lean-forward="false" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+            <state relative-caret-position="238">
+              <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -141,18 +753,48 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>BUY</find>
-      <find>(251)</find>
       <find>&quot;DC.&quot;,</find>
       <find>last._3</find>
       <find>.last._</find>
       <find>REX</find>
       <find>%</find>
+      <find>testFilter</find>
+      <find>update</find>
+      <find>nextSi</find>
+      <find>STX</find>
+      <find>FOX</find>
+      <find>QVCA</find>
+      <find>cl</find>
+      <find>class</find>
+      <find>clas</find>
+      <find>cla</find>
+      <find>S</find>
+      <find>St</find>
+      <find>Stock</find>
+      <find>StockH</find>
+      <find>StockHi</find>
+      <find>StockHis</find>
+      <find>StockHist</find>
+      <find>StockHistor</find>
+      <find>StockHistory</find>
+      <find>cStockHistory</find>
+      <find>claStockHistory</find>
+      <find>clasStockHistory</find>
+      <find>classStockHistory</find>
+      <find>class StockHistory</find>
+      <find>+</find>
     </findStrings>
     <replaceStrings>
       <replace>.last</replace>
       <replace>(lastDay)._</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\Freddie\Google Drive\Programming\IdeaProjects\TradingNetworks\src\main\scala\com\vogonjeltz\tradingnetworks\app</dir>
+      <dir>C:\Users\Freddie\Google Drive\Programming\IdeaProjects\TradingNetworks\src\main\scala\com\vogonjeltz\tradingnetworks</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -172,17 +814,30 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/evolution/EvolutionCoordinator.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/evolution/Generation.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/Vect.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Utils.scala" />
-        <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Stocks.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/evolution/EvolutionCoordinator.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/evolution/Generation.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Tests.scala" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/StockHistory.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanState.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanFilter.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/StockHistory.scala" />
+        <option value="$PROJECT_DIR$/data/get_stock.py" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/StocksPicker.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/StockHistory.scala" />
+        <option value="$PROJECT_DIR$/data/STX.csv" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Utils.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/StocksOptimizer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanPredictor.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/StocksPredictor.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/MatrixFilter.scala" />
+        <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/KalmanTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/MatrixTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/utils/MatrixUtils.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/MatrixKalman/MatrixKalmanState.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/MatrixKalman/MatrixFilter.scala" />
       </list>
     </option>
   </component>
@@ -193,9 +848,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1932" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -212,7 +868,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -355,8 +1010,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="KalmanFilter.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+              <option name="myItemId" value="MatrixKalman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -384,21 +1039,27 @@
               <option name="myItemId" value="tradingnetworks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Scala" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="prop_add_unversioned_files" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -695,6 +1356,13 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -756,6 +1424,10 @@
       <setting name="testName" value="" />
       <setting name="testKind" value="Class" />
       <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
       <envs />
       <method />
     </configuration>
@@ -771,6 +1443,10 @@
       <setting name="testName" value="" />
       <setting name="testKind" value="Class" />
       <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
       <envs />
       <method />
     </configuration>
@@ -842,6 +1518,10 @@
       <setting name="testName" value="" />
       <setting name="testKind" value="Class" />
       <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
       <envs />
       <method />
     </configuration>
@@ -865,7 +1545,7 @@
     </list>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1492108668088" />
+    <option name="lastUpdateTimestamp" value="1493150668909" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -930,12 +1610,18 @@
       <workItem from="1491302191903" duration="10297000" />
       <workItem from="1491577562309" duration="19000" />
       <workItem from="1491746045422" duration="147000" />
-      <workItem from="1492108635527" duration="3744000" />
+      <workItem from="1492108635527" duration="5297000" />
+      <workItem from="1492161865064" duration="10247000" />
+      <workItem from="1492180022500" duration="15454000" />
+      <workItem from="1492266502684" duration="3000" />
+      <workItem from="1492275304279" duration="6104000" />
+      <workItem from="1492674414680" duration="3225000" />
+      <workItem from="1493147045647" duration="7487000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60171000" />
+    <option name="totallyTimeSpent" value="104244000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -947,8 +1633,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1932" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -958,31 +1643,34 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39958158" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32635984" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3085339" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3075314" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25694445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3734375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -990,6 +1678,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initi" />
+    <MESSAGE value="Initial work on using matrices" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial work on using matrices" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1010,112 +1703,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/evolution/Generation.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="101" lean-forward="false" selection-start-line="7" selection-start-column="101" selection-end-line="7" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/Vect.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/NeuralNetwork.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/Matrix.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="53" lean-forward="false" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Tests.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/evolution/EvolutionCoordinator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/evolution/EvolutionSettings.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/evolution/Generation.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="101" lean-forward="false" selection-start-line="7" selection-start-column="101" selection-end-line="7" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/Vect.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/NeuralNetwork.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/Matrix.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="53" lean-forward="false" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Tests.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/evolution/EvolutionCoordinator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/evolution/EvolutionSettings.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/evolution/Generation.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
           <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1144,7 +1732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="13" column="57" lean-forward="false" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,7 +1760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1202,7 +1788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1276,42 +1861,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Utils.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="84" lean-forward="false" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/evolution/Generation.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="51" lean-forward="false" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze-viz_2.12/srcs/breeze-viz_2.12-0.13-sources.jar!/breeze/plot/package.scala" />
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.1-sources.jar!/scala/Predef.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="401" column="4" lean-forward="true" selection-start-line="401" selection-start-column="4" selection-end-line="401" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/StockHistory.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1319,57 +1872,209 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="51" lean-forward="false" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="46" lean-forward="false" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze-viz_2.12/srcs/breeze-viz_2.12-0.13-sources.jar!/breeze/plot/Plot.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="259" column="6" lean-forward="false" selection-start-line="259" selection-start-column="6" selection-end-line="259" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze-viz_2.12/srcs/breeze-viz_2.12-0.13-sources.jar!/breeze/plot/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="85" column="44" lean-forward="true" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.1-sources.jar!/scala/Predef.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="331" column="8" lean-forward="false" selection-start-line="331" selection-start-column="8" selection-end-line="331" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/get_stock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Tests.scala">
+    <entry file="file://$PROJECT_DIR$/data/STX.csv" />
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze-viz_2.12/srcs/breeze-viz_2.12-0.13-sources.jar!/breeze/plot/Figure.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Stocks.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="31" column="619" lean-forward="false" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="619" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/KalmanTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+        <state relative-caret-position="272">
+          <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
           <folding>
-            <element signature="e#44#66#0" expanded="true" />
+            <element signature="e#21#58#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanState.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="73" lean-forward="false" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/StocksFilter.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="11" column="80" lean-forward="false" selection-start-line="11" selection-start-column="80" selection-end-line="11" selection-end-column="80" />
+          <caret line="11" column="67" lean-forward="false" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+          <folding>
+            <marker date="1492675441000" expanded="true" signature="58:89" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanState.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/StocksOptimizer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanFilter.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        <state relative-caret-position="64">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.1-sources.jar!/scala/collection/mutable/ListBuffer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="308" column="15" lean-forward="false" selection-start-line="308" selection-start-column="15" selection-end-line="308" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Tests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <element signature="e#44#125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/StockHistory.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.12/srcs/breeze_2.12-0.13-sources.jar!/breeze/linalg/DenseMatrix.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2194">
+          <caret line="438" column="15" lean-forward="false" selection-start-line="438" selection-start-column="14" selection-end-line="438" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Stocks.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-783">
+          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding>
+            <element signature="e#44#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/Utils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/KalmanTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding>
+            <element signature="e#44#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/utils/MatrixUtils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/app/MatrixTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="19" column="87" lean-forward="false" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
+          <folding>
+            <element signature="e#44#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="84" lean-forward="true" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/StocksPredictor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="50" column="32" lean-forward="false" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/KalmanPredictor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/MatrixKalman/MatrixKalmanState.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/kalman/MatrixKalman/MatrixFilter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+          <folding>
+            <element signature="e#64#86#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
