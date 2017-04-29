@@ -1,5 +1,7 @@
 package com.vogonjeltz.tradingnetworks.app
 
+import com.vogonjeltz.tradingnetworks.lib.StockHistory
+
 import scala.collection.mutable.ListBuffer
 
 /**
@@ -7,7 +9,7 @@ import scala.collection.mutable.ListBuffer
   */
 object Utils {
 
-  def readStock(code: String): List[(String, Double, Double)] = {
+  def readStock(code: String): StockHistory = {
     //println(s"Reading stock $code")
     val bufferedSource = io.Source.fromFile(s"data/$code.csv")
     //(Date, Open, Close)
@@ -19,7 +21,7 @@ object Utils {
       ))
     }
     bufferedSource.close
-    stockHistory.toList
+    new StockHistory(code, stockHistory.toList)
   }
 
 }

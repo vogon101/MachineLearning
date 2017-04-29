@@ -1,84 +1,81 @@
 package com.vogonjeltz.tradingnetworks.lib
 
-import breeze.stats.distributions.Rand
-
 import scala.collection.mutable.ListBuffer
-import scala.util.Random
 
 /**
-  * StocksPicker
+  * StocksPredictor
   *
   * Created by fredd
   */
-abstract class StocksPredictor(
-  protected var _stock: StockHistory,
-  val choiceThreshold: Double = 0.02
-){
+trait StocksPredictor {
 
-  def stock: StockHistory = _stock
+  def trainingStage(): Unit
 
-  def predict(): Double
+  def predictDay(): Double
 
-  def nextSignal(s: Double): Unit
+  def correctForDay(prediction: Double, day: (String, Double, Double)): Double
 
-  def predictedScore: Int = 0
+  /**
+    *
+    * @param data Stock to evaluate on
+    * @param choiceThreshold pc threshold
+    * @return (profitLoss, error)
+    */
+  def evaluate(data: StockHistory, choiceThreshold: Double = 0.02): (List[Double], List[Double]) = {
 
-  def test(nextStockDays: StockHistory):List[Double] = {
+    trainingStage()
+    correctForDay(predictDay(), data.head)
 
+    var dayBefore = data.head
     var cash = 100d
     val plOverTime = ListBuffer[Double](cash)
+    val errorOverTime = ListBuffer[Double]()
 
     var numOwned = 0d
-    var dayBefore = nextStockDays.openings.head
 
-    for (day <- nextStockDays.openings) {
+    for (day <- data.tail) {
 
-      //val prediction = predict()
-      val prediction = Random.nextInt(day.toInt * 2) - day
+      val prediction = predictDay()
+      correctForDay(prediction, day)
 
-      //val sign =  if (prediction > day * (1 + choiceThreshold)) 1
-      //            else if (prediction < day * (1 - choiceThreshold)) -1
-      //            else 0
+      val sign =  if (prediction > dayBefore._2 * (1 + choiceThreshold)) 1
+                  else if (prediction < dayBefore._2 * (1 - choiceThreshold)) -1
+                  else 0
 
-      val sign = Random.nextInt(3) - 1
+      val percentageError = (prediction - day._2) / day._2
+      errorOverTime.append(percentageError)
 
-      //println(s"I own $numOwned")
-
-      //Do trade
       if (sign == 1) {
         //If currently in SHORT position then close that and buy
         if (numOwned <= 0) {
-          cash += numOwned * day
-          numOwned = cash / day
+          cash += numOwned * day._2
+          numOwned = cash / day._2
           cash = 0
         }
 
       } else if (sign == -1) {
 
         if (numOwned >= 0) {
-          cash += numOwned * day
-          numOwned = -cash / day
-          cash += -numOwned * day
+          cash += numOwned * day._2
+          numOwned = -cash / day._2
+          cash += -numOwned * day._2
         }
 
       } else {
         //Close all positions to reduce exposure
-        cash += numOwned * day
-        numOwned = 0
+        //cash += numOwned * day._2
+        //numOwned = 0
       }
 
-      nextSignal(day)
-
-      plOverTime.append(cash + numOwned * day)
-
+      plOverTime.append(cash + numOwned * day._2)
       dayBefore = day
 
     }
 
-    cash += numOwned * dayBefore
-    plOverTime.append(cash)
 
-    plOverTime.toList
+    cash += numOwned * dayBefore._2
+    plOverTime.append(cash)
+    (plOverTime.toList, errorOverTime.toList)
 
   }
 

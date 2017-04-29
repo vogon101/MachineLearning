@@ -4,7 +4,7 @@
 		module="tradingnetworks-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20170425210413"
+		publication="20170428122024"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

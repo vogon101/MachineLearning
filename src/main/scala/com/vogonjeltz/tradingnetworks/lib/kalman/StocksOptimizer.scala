@@ -15,6 +15,7 @@ class StocksOptimizer(
    choiceThreshold: Double = 0.05
 ) {
 
+  /*
   def this(Q_ss: List[Double], R_ss: List[Double], stockHistory: StockHistory, trainingDays: Int) =
     this(Q_ss.toIndexedSeq, R_ss.toIndexedSeq, stockHistory, trainingDays, 0.05)
 
@@ -63,5 +64,6 @@ class StocksOptimizer(
 
     score
   }
+  */
 
 }

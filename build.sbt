@@ -16,7 +16,15 @@ libraryDependencies  ++= Seq(
 
   // The visualization library is distributed separately as well.
   // It depends on LGPL code
-  "org.scalanlp" %% "breeze-viz" % "0.13"
+  "org.scalanlp" %% "breeze-viz" % "0.13",
+
+  // https://mvnrepository.com/artifact/gov.nist.math/jama
+  "gov.nist.math" % "jama" % "1.0.3"
+
 )
+
+// https://mvnrepository.com/artifact/org.apache.commons/commons-math3
+libraryDependencies += "org.apache.commons" % "commons-math3" % "3.0"
+
 
 mainClass in (Compile, run) := Some("com.vogonjeltz.tradingnetworks.app.MatrixTest")
