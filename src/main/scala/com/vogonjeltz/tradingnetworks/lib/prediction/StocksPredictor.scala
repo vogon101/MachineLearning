@@ -1,4 +1,6 @@
-package com.vogonjeltz.tradingnetworks.lib
+package com.vogonjeltz.tradingnetworks.lib.prediction
+
+import com.vogonjeltz.tradingnetworks.lib.StockHistory
 
 import scala.collection.mutable.ListBuffer
 

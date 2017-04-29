@@ -1,7 +1,8 @@
 package com.vogonjeltz.tradingnetworks.lib.kalman
 
 import breeze.linalg._
-import com.vogonjeltz.tradingnetworks.lib.{StockHistory, StocksPredictor}
+import com.vogonjeltz.tradingnetworks.lib.StockHistory
+import com.vogonjeltz.tradingnetworks.lib.prediction.StocksPredictor
 
 import scala.collection.mutable.ListBuffer
 
