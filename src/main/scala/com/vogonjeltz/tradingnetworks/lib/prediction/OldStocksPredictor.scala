@@ -10,7 +10,7 @@ import scala.util.Random
   *
   * Created by fredd
   */
-abstract class StocksPredictor(
+abstract class OldStocksPredictor(
   protected var _stock: StockHistory,
   val choiceThreshold: Double = 0.02
 ){

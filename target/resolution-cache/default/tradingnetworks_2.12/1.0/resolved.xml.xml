@@ -4,7 +4,7 @@
 		module="tradingnetworks_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170425212119"
+		publication="20170427122911"
 	>
 		<description>
 		TradingNetworks
@@ -37,5 +37,7 @@
 		<dependency org="org.scalanlp" name="breeze_2.12" rev="0.13" conf="compile->default(compile)"/>
 		<dependency org="org.scalanlp" name="breeze-natives_2.12" rev="0.13" conf="compile->default(compile)"/>
 		<dependency org="org.scalanlp" name="breeze-viz_2.12" rev="0.13" conf="compile->default(compile)"/>
+		<dependency org="gov.nist.math" name="jama" rev="1.0.3" conf="compile->default(compile)"/>
+		<dependency org="org.apache.commons" name="commons-math3" rev="3.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

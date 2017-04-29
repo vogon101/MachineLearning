@@ -42,7 +42,7 @@ object Stocks extends App {
   }
 
   for (stock <- STOCKS) {
-    stockData.append(new StockHistory(readStock(stock)))
+    stockData.append(new StockHistory(stock, readStock(stock)))
     println(
       if (stockData.last.data(lastDay)._3 > stockData.last.data(lastDay)._2) s"BUY $stock" else s"SELL $stock"
     )

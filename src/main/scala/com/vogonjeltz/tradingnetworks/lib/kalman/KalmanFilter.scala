@@ -1,73 +1,36 @@
 package com.vogonjeltz.tradingnetworks.lib.kalman
 
+import breeze.linalg._
+
 import scala.collection.mutable.ListBuffer
 
 /**
-  * KalmanFilter
-  *
-  * Created by fredd
+  * Created by Freddie on 25/04/2017.
   */
-class KalmanFilter (val predictionStep: (KalmanState) => KalmanState, protected var _state: KalmanState) {
+class KalmanFilter(_initialState: KalmanState){
 
+  private var _state = _initialState
   def state: KalmanState = _state
 
-  def predict(): KalmanState = {
-    _state = predictionStep(state)
+  private val _smoothedValues:ListBuffer[DenseVector[Double]] = ListBuffer()
+  def smoothedValues: List[DenseVector[Double]] = _smoothedValues.toList
+
+  def predictKalman():KalmanState = {
+    //_state = state.from_state(state.x, state.p + state.Q)
     state
   }
 
-  def update(signal: Double): KalmanState = {
-    val xi = state.x
-    val pi = state.p
+  def update(data: DenseVector[Double]): KalmanState = {
 
-    val K = pi / (pi + state.R)
-    val xk = xi + K * (signal - xi)
-    val pk = (1 - K) * pi
+    _state = state.from_state(state.x, state.p + state.Q)
+    val K = state.p * state.H.t * inv(state.H * state.p * state.H.t + state.R)
+    val xn = state.x + K * (data - state.H * state.x)
+    val pn = (state.eye - K * state.H) * state.p
 
-    _state = state.nextTick(xk, pk)
+    _smoothedValues.append(xn)
 
+    _state = state.from_state(xn, pn)
     state
   }
-
-  def tick(signal: Double): KalmanState = {
-    predict()
-    update(signal)
-  }
-
-}
-
-object KalmanFilter {
-
-  def apply(prediction: (KalmanState) => KalmanState)(state: KalmanState):KalmanFilter =
-    new KalmanFilter(prediction, state)
-
-}
-
-/**
-  * Kalman filter that uses simple time based prediction, effectively no model
-  */
-class SimplePredictionKalmanFilter (initialSate: KalmanState)
-  extends KalmanFilter(SimplePredictionKalmanFilter.simplePredictionFunction, initialSate)
-
-object SimplePredictionKalmanFilter {
-
-  val simplePredictionFunction: (KalmanState) => KalmanState = (s) => s.nextTick(s.x, s.p + s.Q)
-
-}
-
-trait FilterTracking extends KalmanFilter {
-
-  private val _xs: ListBuffer[Double] = ListBuffer()
-  private val _ps: ListBuffer[Double] = ListBuffer()
-
-  override def update(z: Double): KalmanState = {
-    _xs.append(state.x)
-    _ps.append(state.p)
-    super.update(z)
-    state
-  }
-
-  def xs = _xs.toList
-  def ps = _ps.toList
 
 }

@@ -1,13 +1,7 @@
 package com.vogonjeltz.tradingnetworks.app
 
-import breeze.linalg._
-//import breeze.stats._
-import breeze.plot._
 import com.vogonjeltz.tradingnetworks.lib.StockHistory
-import scala.util.Random
-import com.vogonjeltz.tradingnetworks.lib.kalman._
 
-import scala.collection.mutable.ListBuffer
 
 /**
   * Created by Freddie on 03/04/2017.
@@ -15,13 +9,14 @@ import scala.collection.mutable.ListBuffer
 object KalmanTest extends App {
 
   val STOCKS = List("III","ADN","ADM","AAL","ANTO","AHT","ABF","AZN","AV.","BAB","BA.","BARC","BDEV","BLT","BP.","BATS","BLND","BT.A","BNZL","BRBY","CPI","CCL","CNA","CCH","CPG","CRH","DCC","DGE","DLG","EZJ","EXPN","FRES","GKN","GSK","GLEN","HMSO","HL.","HIK","HSBA","IMB","ISAT","IHG","IAG","ITRK","INTU","ITV","JMAT","KGF","LAND","LGEN","LLOY","LSE","MKS","MERL","MNDI","NG.","NXT","OML","PSON","PSN","PFG","PRU","RRS","RB.","REL","RIO","RR.","RBS","RDSA","RMG","RSA","SGE","SBRY","SDR","SVT","SHP","SKY","SN.","SMIN","SPD","SSE","STAN","SL.","STJ","TW.","TSCO","TPK","TUI","ULVR","UU.","VOD","WTB","WOS","WPG","WPP","ATVI","ADBE","AKAM","ALXN","GOOG","GOOGL","AMZN","AAL","AMGN","ADI","AAPL","AMAT","ADSK","ADP","BIDU","BIIB","BMRN","AVGO","CA","CELG","CERN","CHTR","CHKP","CTAS","CSCO","CTXS","CTSH","CMCSA","COST","CSX","CTRP","XRAY","DISCA","DISCK","DISH","DLTR","EBAY","EA","EXPE","ESRX","FB","FAST","FISV","GILD","HAS","HSIC","HOLX","IDXX","ILMN","INCY","INTC","INTU","ISRG","JBHT","JD","KLAC","LRCX","LBTYA","LBTYK","LILA","LILAK","LVNTA","QVCA","MAT","MXIM","MCHP","MU","MSFT","MDLZ","MNST","MYL","NTES","NFLX","NCLH","NVDA","ORLY","PCAR","PAYX","PYPL","QCOM","REGN","ROST","SHPG","SIRI","SWKS","SBUX","SYMC","TMUS","TSLA","TXN","KHC","PCLN","TSCO","TRIP","FOXA","ULTA","VRSK","VRTX","VIAB","VOD","WBA","WDC","XLNX","YHOO")
-  val stockData = STOCKS.map(X => new StockHistory(Utils.readStock(X)))
+  val stockData = STOCKS.map(X => Utils.readStock(X))
   val trainingData = stockData.map(_.take(10))
   val testData = stockData.map(_.drop(10))
   println(testData.map(_.length).sum / testData.length.toDouble)
 
   println(STOCKS(59))
 
+  /*
   val qs = ListBuffer[Double]()
   val rs = ListBuffer[Double]()
 
@@ -63,7 +58,7 @@ object KalmanTest extends App {
   plot_0_1.xlabel = "q"
   plot_0_1.ylabel = "r"
 
-  plot_0_hist.xlim(-150, 150)
+  plot_0_hist.xlim(-150, 150)*/
   /*
   val stock = Random.shuffle(stockData).head
   val predictor = new KalmanPredictor(stock.take(100))
