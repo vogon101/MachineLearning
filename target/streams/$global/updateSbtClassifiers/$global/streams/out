@@ -138,7 +138,6 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]}
 [info] Resolving org.scala-lang#scala-reflect;2.10.6 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-[debug] no default cache defined: set to C:\Users\fredd\.ivy2\cache
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.10.6
 [debug] 	found org.scala-lang#scala-reflect;2.10.6 in sbt-chain
 [debug] 	[2.10.6] org.scala-lang#scala-reflect;2.10.6
@@ -1775,9 +1774,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.13!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 1190ms :: artifacts dl 59ms
+[debug] :: resolution report :: resolve 2918ms :: artifacts dl 35ms
 [debug] 	report for default#tradingnetworks$sbt_2.10;1.0 default produced in C:\Users\fredd\Google Drive\Programming\IdeaProjects\TradingNetworks\target\resolution-cache\reports\default-tradingnetworks$sbt_2.10-default.xml
-[debug] 	resolve done (1190ms resolve - 59ms download)
+[debug] 	resolve done (2918ms resolve - 35ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#tradingnetworks$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -2471,6 +2470,6 @@
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.6!scala-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#interface;0.13.13!interface.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#logging;0.13.13!logging.jar(src)
-[debug] :: resolution report :: resolve 296ms :: artifacts dl 103ms
+[debug] :: resolution report :: resolve 263ms :: artifacts dl 75ms
 [debug] 	report for default#tradingnetworks$sources_2.10;1.0 default produced in C:\Users\fredd\Google Drive\Programming\IdeaProjects\TradingNetworks\target\resolution-cache\reports\default-tradingnetworks$sources_2.10-default.xml
-[debug] 	resolve done (296ms resolve - 103ms download)
+[debug] 	resolve done (263ms resolve - 75ms download)

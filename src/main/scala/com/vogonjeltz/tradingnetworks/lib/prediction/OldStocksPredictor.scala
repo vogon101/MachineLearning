@@ -1,6 +1,6 @@
-package com.vogonjeltz.tradingnetworks.lib
+package com.vogonjeltz.tradingnetworks.lib.prediction
 
-import breeze.stats.distributions.Rand
+import com.vogonjeltz.tradingnetworks.lib.StockHistory
 
 import scala.collection.mutable.ListBuffer
 import scala.util.Random
