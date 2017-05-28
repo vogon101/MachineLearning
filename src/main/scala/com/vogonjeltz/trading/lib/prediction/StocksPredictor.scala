@@ -11,7 +11,7 @@ import scala.collection.mutable.ListBuffer
   */
 trait StocksPredictor {
 
-  def trainingStage(): Unit
+  def trainingStage(trainingData: StockHistory): Unit
 
   def predictDay(): Double
 
@@ -23,9 +23,9 @@ trait StocksPredictor {
     * @param choiceThreshold pc threshold
     * @return (profitLoss, error)
     */
-  def evaluate(data: StockHistory, choiceThreshold: Double = 0.02): (List[Double], List[Double]) = {
+  def evaluate(trainingData: StockHistory, data: StockHistory, choiceThreshold: Double = 0.02): (List[Double], List[Double]) = {
 
-    trainingStage()
+    trainingStage(trainingData)
     correctForDay(predictDay(), data.head)
 
     var dayBefore = data.head

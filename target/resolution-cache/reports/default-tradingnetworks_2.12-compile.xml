@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170427122911"/>
+		date="20170525094133"/>
 	<dependencies>
 		<module organisation="gov.nist.math" name="jama">
 			<revision name="1.0.3" status="release" pubdate="20130617010433" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://math.nist.gov/javanumerics/jama/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="42">

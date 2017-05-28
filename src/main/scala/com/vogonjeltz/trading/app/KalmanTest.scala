@@ -2,8 +2,9 @@ package com.vogonjeltz.trading.app
 
 import breeze.linalg.DenseVector
 import breeze.plot._
-import com.vogonjeltz.trading.lib.StockHistory
-import com.vogonjeltz.trading.lib.kalman.KalmanPredictor
+
+import com.vogonjeltz.trading.lib.models.kalman.KalmanPredictor
+import com.vogonjeltz.trading.lib.models.movingaverage.{SMAPredictor, WMAPredictor}
 
 import scala.collection.mutable.ListBuffer
 
@@ -19,46 +20,104 @@ object KalmanTest extends App {
   val testData = stockData.map(_.drop(10))
   println(testData.map(_.length).sum / testData.length.toDouble)
 
-  println(STOCKS(59))
-
 
   val qs = ListBuffer[Double]()
   val rs = ListBuffer[Double]()
 
 
-  val pls = ListBuffer[Double]()
+  val kpls = ListBuffer[Double]()
+  val spls = ListBuffer[Double]()
+  val wpls = ListBuffer[Double]()
 
   for ((stock, i) <- stockData.zipWithIndex) {
+    val testData = stock.drop(50)
 
-    val predictor = new KalmanPredictor(0.005, 0.995, stock.take(100), false)
-    val pl = predictor.evaluate(stock.drop(100))._1
+    val KALPred = new KalmanPredictor(0.08, 0.96, stock.take(50), false)
+    val KALPL = KALPred.evaluate(stock.take(50), stock.drop(50), 0d)._1
+
+    val period = 15
+
+    val SMAPred = new SMAPredictor(period)
+    val SMAPL = SMAPred.evaluate(stock.drop(50-period).take(period), stock.drop(50), 0d)._1
+
+    val WMAPred = new WMAPredictor(period)
+    val WMAPL = WMAPred.evaluate(stock.drop(50-period).take(period), stock.drop(50), 0d)._1
+
     println(STOCKS(i))
-    pls.append(pl.last)
 
-    if (pl.last > 200) println(s"High profits on ${STOCKS(i)} (${pl.last})")
+    spls.append(SMAPL.last)
+    kpls.append(KALPL.last)
+    wpls.append(WMAPL.last)
+
+    /*
+    val fig0 = Figure()
+    val plot0_0 = fig0.subplot(0)
+    val plot0_1 = fig0.subplot(2,1,1)
+    val plot0_2 = fig0.subplot(3,1,2)
+
+    plot0_0 += plot(new DenseVector[Double](KALPred.smoothedValues.indices.map(_.toDouble).toArray), new DenseVector[Double](KALPred.smoothedValues.map(_(0)).toArray), '-')
+    plot0_0 += plot(new DenseVector[Double](stock.data.indices.map(_.toDouble).toArray), new DenseVector[Double](stock.openings.toArray))
+
+    plot0_1 += plot(new DenseVector[Double](SMAPred.smoothedValues.indices.map(_.toDouble).toArray), new DenseVector[Double](SMAPred.smoothedValues.map(_(0)).toArray), '-')
+    plot0_1 += plot(new DenseVector[Double](stock.drop(50-period).data.indices.map(_.toDouble).toArray), new DenseVector[Double](stock.drop(50-period).openings.toArray))
+
+    plot0_2 += plot(new DenseVector[Double](WMAPred.smoothedValues.indices.map(_.toDouble).toArray), new DenseVector[Double](WMAPred.smoothedValues.map(_(0)).toArray), '-')
+    plot0_2 += plot(new DenseVector[Double](stock.drop(50-period).data.indices.map(_.toDouble).toArray), new DenseVector[Double](stock.drop(50-period).openings.toArray))
+    */
+
+    //if (pl.last > 200) println(s"High profits on ${STOCKS(i)} (${pl.last})")
 
   }
 
   println(s"Test over ${STOCKS.length} stocks")
-  println(s"Average profit: ${pls.map(_ - 100).sum / pls.length}")
-  println(s"Stocks in profit %: ${pls.count(_ > 100) * 100d/ pls.length}")
+
+  println(s"Kalman Filter:")
+  println(s"Average profit: ${kpls.map(_ - 100).sum / kpls.length}")
+  println(s"Stocks in profit %: ${kpls.count(_ > 100) * 100d/ kpls.length}")
+
+  println(s"SMA:")
+  println(s"Average profit: ${spls.map(_ - 100).sum / spls.length}")
+  println(s"Stocks in profit %: ${spls.count(_ > 100) * 100d/ spls.length}")
+
+  println(s"WMA:")
+  println(s"Average profit: ${wpls.map(_ - 100).sum / wpls.length}")
+  println(s"Stocks in profit %: ${wpls.count(_ > 100) * 100d/ wpls.length}")
+
+  println("Kalman")
+  println(kpls.mkString(","))
+  println("Simple")
+  println(spls.mkString(","))
+  println("Weighted")
+  println(wpls.mkString(","))
+
+  for (i <- kpls.indices) {
+    println(s"${i} ${kpls(i)} ${spls(i)} ${wpls(i)}")
+  }
 
   val fig1 = Figure()
-  val plot_0 = fig1.subplot(0)
-  val plot_0_hist = fig1.subplot(2,1,1)
-  plot_0 += plot(new DenseVector[Double](pls.indices.map(_.toDouble).toArray), new DenseVector[Double](pls.map(_ - 100).toArray), '-', tips = (i) => STOCKS(i))
-  plot_0 += plot(new DenseVector[Double](pls.indices.map(_.toDouble).toArray), new DenseVector[Double](Array.fill(pls.length)(0d)))
-  plot_0_hist += hist(new DenseVector[Double](pls.toArray.map(_ - 100d)), HistogramBins.fromRange(-150, 150, 150))
+  val plot1_0 = fig1.subplot(0)
+  val plot1_1 = fig1.subplot(2,1,1)
+  val plot1_2 = fig1.subplot(3,1,2)
+  //val plot_0_hist = fig1.subplot(2,1,1)
+  plot1_0 += plot(new DenseVector[Double](kpls.indices.map(_.toDouble).toArray), new DenseVector[Double](kpls.map(_ - 100).toArray), '-', tips = (i) => STOCKS(i))
+  plot1_0 += plot(new DenseVector[Double](kpls.indices.map(_.toDouble).toArray), new DenseVector[Double](Array.fill(kpls.length)(0d)))
+
+  plot1_1 += plot(new DenseVector[Double](spls.indices.map(_.toDouble).toArray), new DenseVector[Double](spls.map(_ - 100).toArray), '-', tips = (i) => STOCKS(i))
+  plot1_1 += plot(new DenseVector[Double](spls.indices.map(_.toDouble).toArray), new DenseVector[Double](Array.fill(spls.length)(0d)))
+
+  plot1_2 += plot(new DenseVector[Double](wpls.indices.map(_.toDouble).toArray), new DenseVector[Double](wpls.map(_ - 100).toArray), '-', tips = (i) => STOCKS(i))
+  plot1_2 += plot(new DenseVector[Double](wpls.indices.map(_.toDouble).toArray), new DenseVector[Double](Array.fill(wpls.length)(0d)))
+  //plot_0_hist += hist(new DenseVector[Double](pls.toArray.map(_ - 100d)), HistogramBins.fromRange(-150, 150, 150))
   //plot_1 += plot(new DenseVector[Double](qs.toArray), new DenseVector[Double](rs.toArray), '+', labels = (i: Int) => STOCKS(i))
 
-  plot_0.xlabel = "Stock"
-  plot_0.ylabel = "Profit %"
+  plot1_0.xlabel = "Stock"
+  plot1_0.ylabel = "Profit %"
 
-  plot_0_hist.xlabel = "Profit %"
-  plot_0_hist.ylabel = "Frequency"
+  //plot_0_hist.xlabel = "Profit %"
+  //plot_0_hist.ylabel = "Frequency"
 
 
-  plot_0_hist.xlim(-150, 150)
+  //plot_0_hist.xlim(-150, 150)
   /*
   val stock = Random.shuffle(stockData).head
   val predictor = new KalmanPredictor(stock.take(100))

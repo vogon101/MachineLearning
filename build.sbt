@@ -1,8 +1,8 @@
-name := "TradingNetworks"
+name := "Trading"
 
 version := "1.0"
 
-scalaVersion := "2.12.1"
+scalaVersion := "2.11.11"
 
 libraryDependencies  ++= Seq(
   // Last stable release
@@ -19,12 +19,22 @@ libraryDependencies  ++= Seq(
   "org.scalanlp" %% "breeze-viz" % "0.13",
 
   // https://mvnrepository.com/artifact/gov.nist.math/jama
-  "gov.nist.math" % "jama" % "1.0.3"
+
+  "net.liftweb" % "lift-json_2.11" % "3.0.1"
 
 )
 
 // https://mvnrepository.com/artifact/org.apache.commons/commons-math3
 libraryDependencies += "org.apache.commons" % "commons-math3" % "3.0"
 
+fork in run := true
 
-mainClass in (Compile, run) := Some("com.vogonjeltz.tradingnetworks.app.MatrixTest")
+outputStrategy in run := Some(StdoutOutput)
+
+connectInput in run := true
+
+javaOptions in run ++= Seq(
+  "-Xms256M", "-Xmx2G", "-XX:MaxPermSize=1024M", "-XX:+UseConcMarkSweepGC")
+
+
+mainClass in (Compile, run) := Some("com.vogonjeltz.trading.app.KalmanTest")
