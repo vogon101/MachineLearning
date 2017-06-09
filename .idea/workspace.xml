@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5fb2cd8-ded3-411e-8123-2797806180e0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/Utils.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/Utils.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -56,14 +57,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utils.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Utils.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/Utils.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="107" column="4" lean-forward="false" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
+            <state relative-caret-position="16">
+              <caret line="90" column="27" lean-forward="false" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
               <folding>
                 <element signature="e#36#72#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="119">
+                <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -208,7 +222,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/NeuralNetwork.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/evolution/EvolutionCoordinator.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/evolution/Generation.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/Vect.scala" />
@@ -259,6 +272,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/DL4JTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/Serialise.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/Utils.scala" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -988,7 +1002,7 @@
       <workItem from="1495903263640" duration="54000" />
       <workItem from="1495903387962" duration="936000" />
       <workItem from="1495962803884" duration="7997000" />
-      <workItem from="1497027465765" duration="1397000" />
+      <workItem from="1497027465765" duration="1692000" />
     </task>
     <task id="LOCAL-00001" summary="Initial work on using matrices">
       <created>1493155085290</created>
@@ -1001,7 +1015,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148804000" />
+    <option name="totallyTimeSpent" value="149099000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1074,7 +1088,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/tradingnetworks/lib/networks/evolution/EvolutionCoordinator.scala" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1298,7 +1311,7 @@
         <state relative-caret-position="221">
           <caret line="93" column="16" lean-forward="false" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="16" />
           <folding>
-            <element signature="e#36#68#0" expanded="true" />
+            <element signature="e#36#68#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1325,11 +1338,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/Utils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="107" column="4" lean-forward="false" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
+        <state relative-caret-position="16">
+          <caret line="90" column="27" lean-forward="false" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
           <folding>
             <element signature="e#36#72#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="119">
+            <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
