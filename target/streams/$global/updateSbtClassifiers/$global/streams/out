@@ -1774,9 +1774,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.13!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 579ms :: artifacts dl 30ms
+[debug] :: resolution report :: resolve 458ms :: artifacts dl 28ms
 [debug] 	report for trading#trading$sbt_2.10;1.0 default produced in C:\Users\Freddie\Google Drive\Programming\IdeaProjects\TradingNetworks\target\resolution-cache\reports\trading-trading$sbt_2.10-default.xml
-[debug] 	resolve done (579ms resolve - 30ms download)
+[debug] 	resolve done (458ms resolve - 28ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: trading#trading$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -2472,6 +2472,6 @@
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.6!scala-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#interface;0.13.13!interface.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#logging;0.13.13!logging.jar(src)
-[debug] :: resolution report :: resolve 153ms :: artifacts dl 37ms
+[debug] :: resolution report :: resolve 139ms :: artifacts dl 35ms
 [debug] 	report for trading#trading$sources_2.10;1.0 default produced in C:\Users\Freddie\Google Drive\Programming\IdeaProjects\TradingNetworks\target\resolution-cache\reports\trading-trading$sources_2.10-default.xml
-[debug] 	resolve done (153ms resolve - 37ms download)
+[debug] 	resolve done (139ms resolve - 35ms download)

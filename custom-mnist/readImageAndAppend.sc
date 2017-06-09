@@ -2,7 +2,7 @@ import java.awt.image.BufferedImage
 import java.io.File
 import javax.imageio.ImageIO
 
-import com.vogonjeltz.trading.app.Utils
+import com.vogonjeltz.machineInt.lib.Utils
 
 val path = "C:\\Users\\Freddie\\Google Drive\\programming\\IdeaProjects\\TradingNetworks\\custom-mnist"
 
