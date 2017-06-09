@@ -2,51 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5fb2cd8-ded3-411e-8123-2797806180e0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/app/MNISTApplication.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/dl4jModels/MultiLayerModelApplication.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/dl4jModels/MultiLayerModelDefinition.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/dl4jModels/mnist/MnistModelApplication.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/dl4jModels/mnist/MnistModelDef.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/DL4JTest.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/app/DL4JTest.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/KalmanTest.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/app/KalmanTest.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/MNISTTest.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/app/MNISTTest.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/MatrixTest.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/app/MatrixTest.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/QRSearch.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/app/QRSearch.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/StockNetworks.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/app/StockNetworks.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/Stocks.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/app/Stocks.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/Tests.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/app/Tests.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/app/Utils.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/Utils.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/AutoCorrelation.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/AutoCorrelation.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/Serialise.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/Serialise.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/StockHistory.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/StockHistory.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/models/CleverPredictor.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/models/CleverPredictor.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/models/kalman/KalmanFilter.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/models/kalman/KalmanFilter.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/models/kalman/KalmanPredictor.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/models/kalman/KalmanPredictor.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/models/kalman/KalmanState.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/models/kalman/KalmanState.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/models/kalman/StocksOptimizer.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/models/kalman/StocksOptimizer.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/models/movingaverage/SMAPredictor.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/models/movingaverage/SMAPredictor.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/models/movingaverage/SimpleMovingAverage.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/models/movingaverage/SimpleMovingAverage.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/models/movingaverage/WMAPredictor.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/models/movingaverage/WMAPredictor.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/models/movingaverage/WeightedMovingAverage.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/models/movingaverage/WeightedMovingAverage.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/networks/NetworkStorage.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/networks/NetworkStorage.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/networks/NeuralNetwork.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/networks/NeuralNetwork.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/networks/evolution/EvolutionCoordinator.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/networks/evolution/EvolutionCoordinator.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/networks/evolution/EvolutionSettings.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/networks/evolution/EvolutionSettings.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/networks/evolution/Generation.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/networks/evolution/Generation.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/prediction/OldStocksPredictor.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/prediction/OldStocksPredictor.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/prediction/StocksPredictor.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/prediction/StocksPredictor.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/trading/lib/utils/MatrixUtils.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/vogonjeltz/machineInt/lib/utils/MatrixUtils.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/mnist_trained.zip" afterPath="$PROJECT_DIR$/model/mnist_trained.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/run/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/run/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/tradingnetworks.iml" afterPath="$PROJECT_DIR$/.idea/modules/tradingnetworks.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/custom-mnist/block.sc" afterPath="$PROJECT_DIR$/custom-mnist/block.sc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/custom-mnist/blocken.scala" afterPath="$PROJECT_DIR$/custom-mnist/blocken.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/custom-mnist/readImageAndAppend.sc" afterPath="$PROJECT_DIR$/custom-mnist/readImageAndAppend.sc" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -127,8 +87,8 @@
       <file leaf-file-name="build.sbt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="53" column="84" lean-forward="false" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
+            <state relative-caret-position="573">
+              <caret line="53" column="85" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="53" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -355,7 +315,7 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Trading" />
+              <option name="myItemId" value="MachineLearning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -365,7 +325,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Trading" />
+              <option name="myItemId" value="MachineLearning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -379,7 +339,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Trading" />
+              <option name="myItemId" value="MachineLearning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -397,7 +357,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Trading" />
+              <option name="myItemId" value="MachineLearning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -427,7 +387,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Trading" />
+              <option name="myItemId" value="MachineLearning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -461,7 +421,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Trading" />
+              <option name="myItemId" value="MachineLearning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -499,7 +459,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Trading" />
+              <option name="myItemId" value="MachineLearning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -541,7 +501,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Trading" />
+              <option name="myItemId" value="MachineLearning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -571,7 +531,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Trading" />
+              <option name="myItemId" value="MachineLearning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -605,7 +565,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Trading" />
+              <option name="myItemId" value="MachineLearning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -619,7 +579,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Trading" />
+              <option name="myItemId" value="MachineLearning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1175,13 +1135,13 @@
     </list>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1497040364275" />
+    <option name="lastUpdateTimestamp" value="1497041691255" />
     <option name="availableProjects">
       <map>
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="Trading" />
+              <option name="name" value="MachineLearning" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
@@ -1264,7 +1224,7 @@
       <workItem from="1495903263640" duration="54000" />
       <workItem from="1495903387962" duration="936000" />
       <workItem from="1495962803884" duration="7997000" />
-      <workItem from="1497027465765" duration="11080000" />
+      <workItem from="1497027465765" duration="11850000" />
     </task>
     <task id="LOCAL-00001" summary="Initial work on using matrices">
       <created>1493155085290</created>
@@ -1277,7 +1237,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158487000" />
+    <option name="totallyTimeSpent" value="159257000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1290,6 +1250,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1310,7 +1271,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31171548" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31171548" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26302084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1676,8 +1637,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="53" column="84" lean-forward="false" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
+        <state relative-caret-position="573">
+          <caret line="53" column="85" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="53" selection-end-column="85" />
           <folding />
         </state>
       </provider>

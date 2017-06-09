@@ -1,4 +1,4 @@
-name := "Trading"
+name := "MachineLearning"
 
 version := "1.0"
 
