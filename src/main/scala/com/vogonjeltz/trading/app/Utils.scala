@@ -73,6 +73,7 @@ object Utils {
   }
 
   def readBWBMP(path: String, size: Int): Array[Double] = {
+    println(s"Loading image $path")
     val image = ImageIO.read(new File(path))
 
     val imageArray = Array.ofDim[Double](size, size)
@@ -91,7 +92,43 @@ object Utils {
     for (x <- Range(0,size)) {
       for (y <- Range(0, size)) {
         val colour = rotatedImage.getRGB(x, y)
-        val r = (255 - ((colour & 0xff0000) >> 16)) / 255d
+        val p = rotatedImage.getRGB(x, y)
+        val a = 255 - ((p >> 24) & 0xff)
+        val r = 255 - ((p >> 16) & 0xff)
+        val g = 255 - ((p >> 8) & 0xff)
+        val b = p & 0xff
+
+
+        rotatedImage.setRGB(x,y,((a<<24) | (r<<16) | (g<<8) | b))
+        xtotal += x * r
+        ytotal += y * r
+        num += r
+      }
+    }
+
+    val com_1 = (xtotal/num, ytotal/num)
+    println(f"Old Centre of mass: (${com_1._1}%1.2f, ${com_1._2}%1.2f)")
+
+    val translatedImage = new BufferedImage(size,size,image.getType())
+    val g_translate = translatedImage.createGraphics()
+
+    val translate = ((14 - com_1._1) /2, (14 - com_1._2)/2)
+    println(translate)
+
+    val tx: AffineTransform = new AffineTransform
+    tx.translate(translate._1, translate._2)
+    g_translate.setTransform(tx)
+    g_translate.drawImage(rotatedImage, tx, null)
+
+
+    xtotal = 0d
+    ytotal = 0d
+    num = 0d
+
+    for (x <- Range(0,size)) {
+      for (y <- Range(0, size)) {
+        val colour = translatedImage.getRGB(x, y)
+        val r = ((colour & 0xff0000) >> 16) / 255d
         finalImage.append(
           if (r < 0.02) 0
           else r
@@ -102,9 +139,8 @@ object Utils {
       }
     }
 
-    val com_1 = (Math.round(xtotal/num), Math.round(ytotal/num))
-    println(f"Centre of mass: (${com_1._1}%1.2f, ${com_1._2}%1.2f)")
-
+    val com_2 = (Math.round(xtotal/num), Math.round(ytotal/num))
+    println(f"New Centre of mass: (${com_2._1}, ${com_2._2}%1.2f)")
 
 
     //var translatedImage = new BufferedImage(size,size,image.getType())

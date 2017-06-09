@@ -116,7 +116,7 @@ object DL4JTest extends App {
     val labelIndex=28*28
     val numClasses = 10
     val maxNum = 9
-    val batchSize = (maxNum + 1) * 3
+    val batchSize = (maxNum + 1) * 5
 
 
     val recordReader = new CSVRecordReader(numLinesToSkip,delimiter)
@@ -126,7 +126,7 @@ object DL4JTest extends App {
     val stringBuilder = new StringBuilder()
 
     for (i <- Range(0, maxNum + 1)) {
-      for (j <- Range(0,3)) {
+      for (j <- Range(0,5)) {
         val path = folder + s"$i-$j.bmp"
         val image = Utils.readBWBMP(path, 28)
         stringBuilder.append(image.map(X => if (X > 0.1) f"$X%1.2f" else "0.00").mkString(","))
