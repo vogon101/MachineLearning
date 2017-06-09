@@ -105,6 +105,8 @@ object Utils {
     val com_1 = (Math.round(xtotal/num), Math.round(ytotal/num))
     println(f"Centre of mass: (${com_1._1}%1.2f, ${com_1._2}%1.2f)")
 
+    
+
     //var translatedImage = new BufferedImage(size,size,image.getType())
 
 
