@@ -6074,7 +6074,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 1605ms :: artifacts dl 121ms
+[debug] :: resolution report :: resolve 1892ms :: artifacts dl 59ms
 [debug] 	report for default#tradingnetworks-build;0.1-SNAPSHOT compile produced in C:\Users\Freddie\Google Drive\Programming\IdeaProjects\TradingNetworks\project\target\resolution-cache\reports\default-tradingnetworks-build-compile.xml
 [debug] 	report for default#tradingnetworks-build;0.1-SNAPSHOT runtime produced in C:\Users\Freddie\Google Drive\Programming\IdeaProjects\TradingNetworks\project\target\resolution-cache\reports\default-tradingnetworks-build-runtime.xml
 [debug] 	report for default#tradingnetworks-build;0.1-SNAPSHOT test produced in C:\Users\Freddie\Google Drive\Programming\IdeaProjects\TradingNetworks\project\target\resolution-cache\reports\default-tradingnetworks-build-test.xml
@@ -6088,5 +6088,5 @@
 [debug] 	report for default#tradingnetworks-build;0.1-SNAPSHOT docs produced in C:\Users\Freddie\Google Drive\Programming\IdeaProjects\TradingNetworks\project\target\resolution-cache\reports\default-tradingnetworks-build-docs.xml
 [debug] 	report for default#tradingnetworks-build;0.1-SNAPSHOT pom produced in C:\Users\Freddie\Google Drive\Programming\IdeaProjects\TradingNetworks\project\target\resolution-cache\reports\default-tradingnetworks-build-pom.xml
 [debug] 	report for default#tradingnetworks-build;0.1-SNAPSHOT scala-tool produced in C:\Users\Freddie\Google Drive\Programming\IdeaProjects\TradingNetworks\project\target\resolution-cache\reports\default-tradingnetworks-build-scala-tool.xml
-[debug] 	resolve done (1605ms resolve - 121ms download)
+[debug] 	resolve done (1892ms resolve - 59ms download)
 [info] Done updating.

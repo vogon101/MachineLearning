@@ -24,8 +24,22 @@ libraryDependencies  ++= Seq(
 
 )
 
-// https://mvnrepository.com/artifact/org.apache.commons/commons-math3
-libraryDependencies += "org.apache.commons" % "commons-math3" % "3.0"
+
+// https://mvnrepository.com/artifact/org.deeplearning4j/deeplearning4j-core
+libraryDependencies += "org.deeplearning4j" % "deeplearning4j-core" % "0.8.0"
+
+/*libraryDependencies ++= Seq(
+  "org.nd4j" % "nd4j-native" % "0.5.0" classifier "windows-x86_64",
+  "org.nd4j" % "nd4j-native" % "0.5.0"
+)*/
+// https://mvnrepository.com/artifact/org.nd4j/nd4j-native-platform
+libraryDependencies += "org.nd4j" % "nd4j-native-platform" % "0.8.0"
+
+libraryDependencies ++= Seq(
+  "com.twelvemonkeys.imageio" % "imageio" % "3.1.2",
+  "com.twelvemonkeys.imageio" % "imageio-core" % "3.1.2",
+  "com.twelvemonkeys.common" % "common-lang" % "3.1.2"
+)
 
 fork in run := true
 
@@ -37,4 +51,4 @@ javaOptions in run ++= Seq(
   "-Xms256M", "-Xmx2G", "-XX:MaxPermSize=1024M", "-XX:+UseConcMarkSweepGC")
 
 
-mainClass in (Compile, run) := Some("com.vogonjeltz.trading.app.KalmanTest")
+mainClass in (Compile, run) := Some("com.vogonjeltz.trading.app.DL4JTest")

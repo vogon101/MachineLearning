@@ -1,5 +1,10 @@
 package com.vogonjeltz.trading.app
 
+import java.awt.geom.AffineTransform
+import java.awt.image.{AffineTransformOp, BufferedImage}
+import java.io.File
+import javax.imageio.ImageIO
+
 import breeze.linalg.DenseVector
 import com.vogonjeltz.trading.lib.StockHistory
 
@@ -65,6 +70,60 @@ object Utils {
   def readText(path: String): String = {
     val s = io.Source.fromFile(path)
     s.getLines().toList.mkString("\n")
+  }
+
+  def readBWBMP(path: String, size: Int): Array[Double] = {
+    val image = ImageIO.read(new File(path))
+
+    val imageArray = Array.ofDim[Double](size, size)
+
+    val rotatedImage = new BufferedImage(size,size,image.getType())
+    val g = rotatedImage.createGraphics()
+    g.rotate(Math.toRadians(90), size/2,size/2)
+
+    g.drawImage(image, 0, size, size , -size, null)
+
+    val finalImage = new ArrayBuffer[Double]()
+
+    var xtotal, ytotal = 0d
+    var num = 0d
+
+    for (x <- Range(0,size)) {
+      for (y <- Range(0, size)) {
+        val colour = rotatedImage.getRGB(x, y)
+        val r = (255 - ((colour & 0xff0000) >> 16)) / 255d
+        finalImage.append(
+          if (r < 0.02) 0
+          else r
+        )
+        xtotal += x * r
+        ytotal += y * r
+        num += r
+      }
+    }
+
+    val com_1 = (Math.round(xtotal/num), Math.round(ytotal/num))
+    println(f"Centre of mass: (${com_1._1}%1.2f, ${com_1._2}%1.2f)")
+
+    //var translatedImage = new BufferedImage(size,size,image.getType())
+
+
+    //val transform_translate = new AffineTransform()
+
+    //transform_translate.translate((size/2) - com_1._1, (size/2) - com_1._2)
+
+    //val op = new AffineTransformOp(transform_translate, AffineTransformOp.TYPE_BILINEAR);
+
+    //translatedImage = op.filter(translatedImage, null)
+
+    //println(translatedImage.getMinTileX)
+    //println(translatedImage.getWidth)
+
+    //println(translatedImage.getMinTileY)
+    //println(translatedImage.getHeight)
+
+    finalImage.toArray
+
   }
 
 }
