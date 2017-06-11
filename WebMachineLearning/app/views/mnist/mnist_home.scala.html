@@ -53,9 +53,14 @@
             </p>
 
             <p>
-                To use this example draw a <b>single</b> digit in the box and then click send.
+                To use this example draw a <b>single</b> digit in the box and then click send. <b>On mobile this site only works when the zoom level is 100%.</b>
+            </p>
+
+            <p>
+                All the code is available <a href="https://github.com/vogon101/MachineLearning">here</a>
             </p>
         </div>
+
     </div>
 }
 
@@ -98,23 +103,49 @@
             destCtx = document.getElementById("destCanv").getContext("2d");
             ctx = document.getElementById('canvas').getContext("2d");
 
-            canvas.mousedown(function (e) {
-                mousePressed = true;
-                Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, false);
-            });
-
-            canvas.mousemove(function (e) {
-                if (mousePressed) {
-                    Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, true);
+            var mouseDown = function (e) {
+                var pageX = 0
+                var pageY = 0
+                if (e.touches == undefined) {
+                    pageX = e.pageX
+                    pageY = e.pageY
+                } else {
+                    pageX = e.touches[0].pageX
+                    pageY = e.touches[0].pageY
                 }
-            });
+                mousePressed = true;
+                Draw(pageX - $(this).offset().left, pageY - $(this).offset().top, false);
+            }
 
-            canvas.mouseup(function (e) {
+            var mouseMove = function (e) {
+                var pageX,pageY = 0
+                console.log(e)
+                if (e.touches == undefined) {
+                    pageX = e.pageX
+                    pageY = e.pageY
+                } else {
+                    pageX = e.touches[0].pageX
+                    pageY = e.touches[0].pageY
+                }
+                if (mousePressed) {
+                    Draw(pageX - $(this).offset().left, pageY - $(this).offset().top, true);
+                }
+            }
+
+            var mouseLeave =  function (e) {
                 mousePressed = false;
-            });
-            canvas.mouseleave(function (e) {
-                mousePressed = false;
-            });
+            }
+
+            canvas.on('mousedown', mouseDown);
+            canvas.on('mousemove', mouseMove);
+            canvas.on('mouseup', mouseLeave);
+            canvas.on('mouseleave', mouseLeave);
+
+            canvas.bind('touchstart', mouseDown)
+            canvas.bind('touchend', mouseLeave)
+            canvas.bind('touchmove', mouseMove)
+            canvas.bind('touchleave', mouseLeave)
+
             clearArea()
         }
 
@@ -162,6 +193,7 @@
             //ctx.drawImage(canvasElement, 0, 0, 280, 280)
 
             recognise(image, function (s) {
+                ga('send', 'event', 'image', 'sent-' + s.recognised)
                 console.log(s);
                 var maxValue = (Math.max.apply(null, s.results) * 100).toFixed(2)
                 $("#value-rec").html(s.recognised + " (" + maxValue + "%)");

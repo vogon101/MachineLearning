@@ -51,3 +51,22 @@ object MNISTApplication_InitModel extends App {
   println(app.evaluate(testData = mnistTest, 10))
 
 }
+
+object MNISTApplication_MoreTrain extends App {
+
+  val batchSize = 200
+
+
+  val mnistTrain = new MnistDataSetIterator(batchSize, true, MNISTApplication.seed)
+  val mnistTest = new MnistDataSetIterator(batchSize, false, MNISTApplication.seed)
+
+  val model = Serialise.read(MNISTApplication.modelPath)
+
+  val app = new MnistModelApplication(model)
+  while(true) {
+    app.doTraining(MNISTApplication.modelPath, mnistTrain, 5, 1)
+    println(app.evaluate(testData = mnistTest, 10))
+  }
+
+
+}
