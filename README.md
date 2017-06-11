@@ -9,4 +9,4 @@ A collection of simple experiments with neural networks and statistical filters
 * DeepLearning4J small apps
     * MNIST Feedforward Network
 ### Web Machine Learning
-Source code for (learning.vogonjeltz.com)[http://learning.vogonjeltz.com]
+Source code for [learning.vogonjeltz.com](http://learning.vogonjeltz.com)
