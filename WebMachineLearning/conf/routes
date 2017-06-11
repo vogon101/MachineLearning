@@ -1,0 +1,18 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+#MNIST
+GET     /MNIST                      controllers.MNISTEndpoint.index
+GET     /MNIST/                     controllers.MNISTEndpoint.index
+POST     /MNIST/recognise           controllers.MNISTEndpoint.recognise
+
+#Econ
+GET /econ/kalman                    controllers.EconEndpoint.kalman
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+    

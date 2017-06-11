@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: org.deeplearning4j:deeplearning4j-modelimport:0.8.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.deeplearning4j/deeplearning4j-modelimport/jars/deeplearning4j-modelimport-0.8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.deeplearning4j/deeplearning4j-modelimport/srcs/deeplearning4j-modelimport-0.8.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

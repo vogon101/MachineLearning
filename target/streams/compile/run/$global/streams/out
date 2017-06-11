@@ -1,2 +1,0 @@
-[debug] javaOptions: List(-Xms256M, -Xmx2G, -XX:MaxPermSize=1024M, -XX:+UseConcMarkSweepGC)
-[info] Running com.vogonjeltz.machineInt.app.MNISTApplication 

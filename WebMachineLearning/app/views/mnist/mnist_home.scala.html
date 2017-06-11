@@ -1,0 +1,185 @@
+@()
+
+@main("MNIST") {
+
+    <style>
+        .text-red {
+            color:red;
+        }
+        .text-orange {
+            color: orange;
+        }
+        .text-green {
+            color: green;
+        }
+        .text-bold {
+            font-weight: bold;
+        }
+
+        .canvas-area {
+            margin:auto;
+            padding: 0;
+            text-align: center;
+        }
+
+        .center{
+            text-align: center;
+        }
+    </style>
+
+    <div class="row center">
+        <div class="col-sm-12">
+            <h1>MNIST Trained Model</h1>
+            <h3>Handwritten digit recogniser</h3>
+                <div class="canvas-area">
+                    <canvas width="280" height="280" style="border: dashed" id="canvas"></canvas><br/>
+                    <button onclick="clearArea()">Clear</button>
+                    <button onclick="sendImage()">Send</button>
+                </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3>That is a <span id="value-rec">-</span></h3>
+            <h3>Confidences</h3>
+            <ul id="probs"></ul>
+            <canvas width="28" height="28" id="destCanv"></canvas>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3>Project Information</h3>
+            <p>
+                This project uses Deep Learning for Java (DL4J) to power a simple multi-layered feed-forward network. This model has been trained on the MNIST data and achives an accuracy of ~95%
+                with the test set. I used the play framework to make the model accessible via the internet and then HTML5 canvas to allow the user to draw images.
+            </p>
+
+            <p>
+                To use this example draw a <b>single</b> digit in the box and then click send.
+            </p>
+        </div>
+    </div>
+}
+
+<script>
+
+        exampleImage = [0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.49,0.40,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.60,1.00,1.00,1.00,0.80,0.80,0.40,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.80,1.00,1.00,1.00,1.00,1.00,1.00,1.00,0.60,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.80,1.00,1.00,0.60,0.40,0.40,0.60,0.80,1.00,1.00,0.80,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.60,1.00,0.80,0.60,0.00,0.00,0.00,0.00,0.20,0.60,0.80,1.00,0.80,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.40,1.00,1.00,0.80,0.20,0.00,0.00,0.00,0.00,0.00,0.20,0.60,1.00,1.00,0.80,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.60,1.00,1.00,0.40,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.60,1.00,1.00,0.49,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.80,0.80,0.80,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.80,1.00,0.80,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.40,0.80,0.80,0.80,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.49,1.00,0.80,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.40,1.00,0.80,0.80,0.40,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.40,0.80,1.00,0.40,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.40,0.80,0.80,0.80,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.40,1.00,1.00,0.40,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.80,0.80,0.80,0.40,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.49,1.00,0.80,0.40,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.80,0.80,0.80,0.60,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.60,1.00,0.80,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.60,1.00,1.00,1.00,0.40,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.20,1.00,1.00,0.80,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.60,0.80,1.00,0.80,0.40,0.00,0.00,0.00,0.00,0.00,0.20,0.60,1.00,1.00,0.40,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.40,0.80,1.00,1.00,1.00,0.60,0.40,0.20,0.20,0.20,0.60,1.00,1.00,0.60,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.40,0.80,1.00,1.00,1.00,1.00,0.80,0.80,1.00,1.00,1.00,0.80,0.40,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.40,0.60,0.80,0.80,1.00,1.00,1.00,0.80,0.80,0.20,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.20,0.40,0.49,0.49,0.49,0.40,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00]
+
+        function recognise(imageToSend, success) {
+            var s = "[";
+            for (i =0; i < imageToSend.length; i ++) {
+                s = s + imageToSend[i] + (i == imageToSend.length-1 ? "]" : ",")
+            }
+            $.ajax({
+                url: "/MNIST/recognise",
+                data: {
+                    body: "{\"image\":" + s +"}"
+                },
+                method: "POST"
+            }).done(function(r) {
+                success(JSON.parse(r))
+            }).fail(function(e) {
+                alert((JSON.parse(e.responseText).error))
+                console.log("ERROR")
+            })
+        }
+
+        /*recognise(exampleImage, function (r) {
+            console.log(r.recognised)
+        });*/
+
+        var mousePressed = false;
+        var lastX, lastY;
+        var ctx;
+        var width = 20;
+        var canvas = $("#canvas");
+        var destCtx = document.getElementById("destCanv").getContext("2d");
+        var canvasElement = document.getElementById("canvas")
+
+        function InitThis() {
+            destCtx = document.getElementById("destCanv").getContext("2d");
+            ctx = document.getElementById('canvas').getContext("2d");
+
+            canvas.mousedown(function (e) {
+                mousePressed = true;
+                Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, false);
+            });
+
+            canvas.mousemove(function (e) {
+                if (mousePressed) {
+                    Draw(e.pageX - $(this).offset().left, e.pageY - $(this).offset().top, true);
+                }
+            });
+
+            canvas.mouseup(function (e) {
+                mousePressed = false;
+            });
+            canvas.mouseleave(function (e) {
+                mousePressed = false;
+            });
+            clearArea()
+        }
+
+        function Draw(x, y, isDown) {
+            if (isDown) {
+                ctx.beginPath();
+                ctx.strokeStyle = "#000000";
+                ctx.lineWidth = width;
+                ctx.lineJoin = "round";
+                ctx.moveTo(lastX, lastY);
+                ctx.lineTo(x, y);
+                ctx.closePath();
+                ctx.stroke();
+            }
+            lastX = x; lastY = y;
+        }
+
+        function clearArea() {
+            // Use the identity matrix while clearing the canvas
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, 280, 280);
+        }
+
+
+        function sendImage() {
+
+            destCtx.drawImage(canvasElement, 0, 0, 280, 280, 0, 0, 28, 28);
+            imageData = destCtx.getImageData(0,0,28,28);
+            var width  = imageData.width;
+            var height = imageData.height;
+            var data = imageData.data;
+
+            var image = new Float32Array(28*28)
+            for (var p = 0; p < data.length; p+=4) {
+                var x = p / 4 % width;
+                var y = (p / 4 - x) / width;
+                var value = 1 - (data[p] / 256)
+                image[y * 28 + x] = value
+            }
+
+            console.log("Sending Image")
+            imageData = ctx.getImageData(0,0,28,28);
+            console.log(imageData)
+            //ctx.drawImage(canvasElement, 0, 0, 280, 280)
+
+            recognise(image, function (s) {
+                console.log(s);
+                var maxValue = (Math.max.apply(null, s.results) * 100).toFixed(2)
+                $("#value-rec").html(s.recognised + " (" + maxValue + "%)");
+                $("#probs").html("");
+                for (i = 0; i < s.results.length; i++) {
+                    var value = s.results[i];
+                    var colour = "text-black";
+                    if (value > 0.1) colour = "text-red";
+                    if (value > 0.4) colour = "text-orange";
+                    if (value > 0.6) colour = "text-green";
+                    var bold = ""
+                    if (i == s.recognised) bold = "text-bold"
+                    $("#probs").append("<li class='" + colour + " " + bold + "'>" + i + " - " + ((value) * 100).toFixed(2) + "%</li>")
+                }
+            })
+
+        }
+
+
+        InitThis()
+</script>
