@@ -25,27 +25,22 @@ class MnistModelDef(override val seed: Int) extends MultiLayerModelDefinition {
     .momentum(0.9)
     .regularization(true).l2(1e-4)
     .list()
-    .layer(0, new DenseLayer.Builder() //create the first, input layer with xavier initialization
+    .layer(0, new DenseLayer.Builder()
       .nIn(imageSize * imageSize)
-      .nOut(1000)
+      .nOut(1300)
       .activation(Activation.RELU)
       .weightInit(WeightInit.XAVIER)
       .build())
     .layer(1, new DenseLayer.Builder()
-      .nIn(1000)
+      .nIn(1300)
       .nOut(300)
-      .activation(Activation.TANH)
+      .activation(Activation.RELU)
+      .weightInit(WeightInit.XAVIER)
       .build())
-    .layer(2, new DenseLayer.Builder()
-      .nIn(300)
-      .nOut(300)
-      .build()
-    )
-    .layer(3, new OutputLayer.Builder(LossFunction.NEGATIVELOGLIKELIHOOD) //create hidden layer
+    .layer(2, new OutputLayer.Builder(LossFunction.NEGATIVELOGLIKELIHOOD)
       .nIn(300)
       .nOut(10)
       .activation(Activation.SOFTMAX)
-      .weightInit(WeightInit.XAVIER)
       .build())
     .pretrain(false).backprop(true) //use backpropagation to adjust weights
     .build()
@@ -57,3 +52,4 @@ class MnistModelDef(override val seed: Int) extends MultiLayerModelDefinition {
   }
 
 }
+

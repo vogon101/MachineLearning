@@ -99,6 +99,8 @@
         var destCtx = document.getElementById("destCanv").getContext("2d");
         var canvasElement = document.getElementById("canvas")
 
+        var moveTicks = 0
+
         function InitThis() {
             destCtx = document.getElementById("destCanv").getContext("2d");
             ctx = document.getElementById('canvas').getContext("2d");
@@ -128,12 +130,17 @@
                     pageY = e.touches[0].pageY
                 }
                 if (mousePressed) {
+                    moveTicks++
+                    if (moveTicks > 10)
+                        sendImage()
                     Draw(pageX - $(this).offset().left, pageY - $(this).offset().top, true);
                 }
             }
 
             var mouseLeave =  function (e) {
                 mousePressed = false;
+                moveTicks = 0
+                sendImage()
             }
 
             canvas.on('mousedown', mouseDown);
@@ -173,6 +180,7 @@
 
         function sendImage() {
 
+            moveTicks = 0
             destCtx.drawImage(canvasElement, 0, 0, 280, 280, 0, 0, 28, 28);
             imageData = destCtx.getImageData(0,0,28,28);
             var width  = imageData.width;

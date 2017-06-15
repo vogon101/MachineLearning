@@ -16,7 +16,7 @@ import play.api.libs.json._
   */
 object MNISTResources {
 
-  lazy val model: MultiLayerNetwork = Serialise.read(ConfigFactory.load().getString("models.folder")+"v1.zip")
+  lazy val model: MultiLayerNetwork = Serialise.read(ConfigFactory.load().getString("models.folder")+ConfigFactory.load().getString("models.model"))
   lazy val app = new MnistModelApplication(model)
 
   def parseData(in: String): Either[MNISTImage, String] = {
