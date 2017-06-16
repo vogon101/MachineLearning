@@ -87,7 +87,7 @@ object Utils {
 
     for (x <- Range(0,size)) {
       for (y <- Range(0, size)) {
-        val colour = rotatedImage.getRGB(x, y)
+
         val p = rotatedImage.getRGB(x, y)
         val a = 255 - ((p >> 24) & 0xff)
         val r = 255 - ((p >> 16) & 0xff)
@@ -95,7 +95,7 @@ object Utils {
         val b = p & 0xff
 
 
-        rotatedImage.setRGB(x,y,((a<<24) | (r<<16) | (g<<8) | b))
+        rotatedImage.setRGB(x, y, (a<<24) | (r<<16) | (g<<8) | b)
         xtotal += x * r
         ytotal += y * r
         num += r
@@ -115,7 +115,6 @@ object Utils {
     tx.translate(translate._1, translate._2)
     g_translate.setTransform(tx)
     g_translate.drawImage(rotatedImage, tx, null)
-
 
     xtotal = 0d
     ytotal = 0d
