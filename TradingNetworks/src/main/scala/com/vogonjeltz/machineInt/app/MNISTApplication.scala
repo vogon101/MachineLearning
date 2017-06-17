@@ -19,7 +19,7 @@ object MNISTApplication {
   //http://progur.com/2017/03/how-to-create-convolutional-neural-networks-java-dl4j.html
   //http://semantive.com/deep-learning-examples/
 
-  val modelPath = "model/mnist/v2.zip"
+  val modelPath = "model/mnist/v3.zip"
   val seed = 100
 
   def main(args: Array[String]): Unit = {
@@ -54,7 +54,7 @@ object MNISTApplication_InitModel extends App {
   val model = definition.createModel()
 
   val app = new MnistModelApplication(model)
-  app.doTraining(MNISTApplication.modelPath, mnistTrain, 3, 6)
+  app.doTraining(MNISTApplication.modelPath, mnistTrain, 1, 1)
   println(app.evaluate(testData = mnistTest, 10))
 
 }
@@ -70,7 +70,7 @@ object MNISTApplication_MoreTrain extends App {
 
   val app = new MnistModelApplication(model)
   while(true) {
-    app.doTraining(MNISTApplication.modelPath, mnistTrain, 5, 1)
+    app.doTraining(MNISTApplication.modelPath, mnistTrain, 3, 1)
     println(app.evaluate(testData = mnistTest, 10))
   }
 

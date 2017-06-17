@@ -3,6 +3,7 @@
 @main("MNIST") {
 
     <style>
+
         .text-red {
             color:red;
         }
@@ -20,11 +21,27 @@
             margin:auto;
             padding: 0;
             text-align: center;
+            min-height: 20vw;
+            min-width: 20vw;
+            max-width:80vw;
+            max-height:80vw;
+            width: 40vh;
+            height: 40vh;
         }
 
         .center{
             text-align: center;
         }
+        #main-canvas {
+            width:100%;
+            height:100%;
+        }
+
+        h1 {
+            font-size: 4vw;
+        }
+
+
     </style>
 
     <div class="row center">
@@ -32,10 +49,10 @@
             <h1>MNIST Trained Model</h1>
             <h3>Handwritten digit recogniser</h3>
                 <div class="canvas-area">
-                    <canvas width="280" height="280" style="border: dashed" id="canvas"></canvas><br/>
-                    <button onclick="clearArea()">Clear</button>
-                    <button onclick="sendImage()">Send</button>
-                </div>
+                    <canvas width="280" height="280" style="border: dashed" id="main-canvas"></canvas><br/>
+                </div><br/>
+                <button onclick="clearArea()">Clear</button>
+
         </div>
     </div>
     <div class="row">
@@ -50,6 +67,10 @@
             <p>
                 This project uses Deep Learning for Java (DL4J) to power a simple multi-layered feed-forward network. This model has been trained on the MNIST data and achives an accuracy of ~95%
                 with the test set. I used the play framework to make the model accessible via the internet and then HTML5 canvas to allow the user to draw images.
+            </p>
+
+            <p>
+                I have written a short blog post about this project <a href="http://blog.vogonjeltz.com/programming/neural-networks/machine-learning/dl4j/scala/2017/06/09/Neural-Networks-MNIST.html">here</a>.
             </p>
 
             <p>
@@ -95,15 +116,15 @@
         var lastX, lastY;
         var ctx;
         var width = 20;
-        var canvas = $("#canvas");
+        var canvas = $("#main-canvas");
         var destCtx = document.getElementById("destCanv").getContext("2d");
-        var canvasElement = document.getElementById("canvas")
+        var canvasElement = document.getElementById("main-canvas")
 
         var moveTicks = 0
 
         function InitThis() {
             destCtx = document.getElementById("destCanv").getContext("2d");
-            ctx = document.getElementById('canvas').getContext("2d");
+            ctx = document.getElementById('main-canvas').getContext("2d");
 
             var mouseDown = function (e) {
                 var pageX = 0
@@ -115,13 +136,16 @@
                     pageX = e.touches[0].pageX
                     pageY = e.touches[0].pageY
                 }
+                console.log("hello")
+                console.log(e)
                 mousePressed = true;
-                Draw(pageX - $(this).offset().left, pageY - $(this).offset().top, false);
+                lastX = (pageX - $(this).offset().left) * 280 / canvas.width()
+                lastY = (pageY - $(this).offset().top) * 280 / canvas.width()
             }
 
             var mouseMove = function (e) {
                 var pageX,pageY = 0
-                console.log(e)
+
                 if (e.touches == undefined) {
                     pageX = e.pageX
                     pageY = e.pageY
@@ -130,17 +154,20 @@
                     pageY = e.touches[0].pageY
                 }
                 if (mousePressed) {
+                    console.log(e)
                     moveTicks++
                     if (moveTicks > 10)
                         sendImage()
-                    Draw(pageX - $(this).offset().left, pageY - $(this).offset().top, true);
+                    Draw((pageX - $(this).offset().left) * 280 / canvas.width(), (pageY - $(this).offset().top) * 280 / canvas.width(), true);
                 }
             }
 
             var mouseLeave =  function (e) {
-                mousePressed = false;
-                moveTicks = 0
-                sendImage()
+                if (mousePressed) {
+                    sendImage()
+                    mousePressed = false;
+                    moveTicks = 0
+                }
             }
 
             canvas.on('mousedown', mouseDown);
