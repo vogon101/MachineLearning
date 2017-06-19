@@ -51,5 +51,5 @@ javaOptions in run ++= Seq(
   "-Xms256M", "-Xmx2G", "-XX:MaxPermSize=1024M", "-XX:+UseConcMarkSweepGC")
 
 
-mainClass in (Compile, run) := Some("com.vogonjeltz.machineInt.app.MNISTApplication_MoreTrain")
+mainClass in (Compile, run) := Some("com.vogonjeltz.machineInt.app.ExponentialNeuronTest")
 
