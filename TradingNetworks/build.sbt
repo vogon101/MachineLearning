@@ -41,6 +41,11 @@ libraryDependencies ++= Seq(
   "com.twelvemonkeys.common" % "common-lang" % "3.1.2"
 )
 
+// https://mvnrepository.com/artifact/org.deeplearning4j/deeplearning4j-ui
+// https://mvnrepository.com/artifact/org.deeplearning4j/deeplearning4j-ui_2.11
+libraryDependencies += "org.deeplearning4j" % "deeplearning4j-ui_2.11" % "0.8.0"
+
+
 fork in run := true
 
 outputStrategy in run := Some(StdoutOutput)
@@ -51,5 +56,5 @@ javaOptions in run ++= Seq(
   "-Xms256M", "-Xmx2G", "-XX:MaxPermSize=1024M", "-XX:+UseConcMarkSweepGC")
 
 
-mainClass in (Compile, run) := Some("com.vogonjeltz.machineInt.app.ExponentialNeuronTest")
+mainClass in (Compile, run) := Some("com.vogonjeltz.machineInt.app.MNISTApplication")
 

@@ -14,7 +14,7 @@ class MnistModelApplication (override val model: MultiLayerNetwork) extends Mult
   override def use(input: INDArray) = use(input, false)
 
   def use(input: INDArray, log: Boolean): (Int, Array[Double]) = {
-    val output = model.output(input).dup.data.asDouble
+    val output = model.output(input, false).dup.data.asDouble
     var bestGuess = (-1d, -1)
     for ((x, i) <- output.zipWithIndex) {
       if (log) println(f"$i - $x%1.2f")
@@ -23,8 +23,8 @@ class MnistModelApplication (override val model: MultiLayerNetwork) extends Mult
     (bestGuess._2, output)
   }
 
-  def use(pathToImage: String) : (Int, Array[Double])= {
-    val imageData = Utils.readBWBMP(pathToImage, 28)
+  def use(pathToImage: String, log: Boolean) : (Int, Array[Double])= {
+    val imageData = Utils.readBWBMP(pathToImage, 28, log)
     val input = new NDArray(imageData.map(_.toFloat))
     use(input)
   }

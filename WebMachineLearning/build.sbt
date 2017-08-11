@@ -19,14 +19,8 @@ libraryDependencies  ++= Seq(
   "net.liftweb" % "lift-json_2.11" % "3.0.1"
 )
 
-// https://mvnrepository.com/artifact/org.deeplearning4j/deeplearning4j-core
 libraryDependencies += "org.deeplearning4j" % "deeplearning4j-core" % "0.8.0"
 
-/*libraryDependencies ++= Seq(
-  "org.nd4j" % "nd4j-native" % "0.5.0" classifier "windows-x86_64",
-  "org.nd4j" % "nd4j-native" % "0.5.0"
-)*/
-// https://mvnrepository.com/artifact/org.nd4j/nd4j-native-platform
 libraryDependencies += "org.nd4j" % "nd4j-native-platform" % "0.8.0"
 
 libraryDependencies ++= Seq(

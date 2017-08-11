@@ -2,6 +2,7 @@
   <library name="SBT: commons-codec:commons-codec:1.10:jar">
     <CLASSES>
       <root url="jar://C:/Activator/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

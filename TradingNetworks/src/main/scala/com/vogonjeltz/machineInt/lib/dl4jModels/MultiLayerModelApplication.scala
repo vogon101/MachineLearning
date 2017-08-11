@@ -16,6 +16,7 @@ abstract class MultiLayerModelApplication[T] {
   def use(input: INDArray): (T, Array[Double])
 
   def doTraining(savePath: String, trainingData: DataSetIterator, saveInterval: Int = 5, maxIntervals: Int = 20) = {
+
     println(s"Training model for ${saveInterval * maxIntervals} epochs")
     for (i <- Range(0, maxIntervals)) {
       for (j <- Range(0, saveInterval)) {

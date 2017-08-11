@@ -73,14 +73,14 @@ class MnistModelDef(override val seed: Int) extends MultiLayerModelDefinition {
       .kernelSize(2,2)
       .stride(2,2)
       .build())
-    .layer(4, new DenseLayer.Builder().activation(Activation.RELU)
+    .layer(4, new DenseLayer.Builder().activation(Activation.RELU).dropOut(0.5)
       .nOut(500).build())
     .layer(5, new OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
       .nOut(10)
       .activation(Activation.SOFTMAX)
       .build())
     .setInputType(InputType.convolutionalFlat(28,28,1)) //See note below
-    .backprop(true).pretrain(false).build();
+    .backprop(true).pretrain(false).build()
     /*
     .seed(seed)
     .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)

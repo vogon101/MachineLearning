@@ -47,6 +47,9 @@
     <div class="row center">
         <div class="col-sm-12">
             <h1>MNIST Trained Model</h1>
+            <a class="github-button" href="https://github.com/vogon101/MachineLearning/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch vogon101/MachineLearning on GitHub">Watch</a>
+            <a class="github-button" href="https://github.com/vogon101/MachineLearning" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star vogon101/MachineLearning on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/vogon101/MachineLearning/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork vogon101/MachineLearning on GitHub">Fork</a>
             <h3>Handwritten digit recogniser</h3>
                 <div class="canvas-area">
                     <canvas width="280" height="280" style="border: dashed" id="main-canvas"></canvas><br/>
@@ -65,7 +68,7 @@
         <div class="col-md-6 col-sm-12">
             <h3>Project Information</h3>
             <p>
-                This project uses Deep Learning for Java (DL4J) to power a simple multi-layered feed-forward network. This model has been trained on the MNIST data and achives an accuracy of ~95%
+                This project uses Deep Learning for Java (DL4J) to power a simple multi-layered convolutional network. This model has been trained on the MNIST data and achives an accuracy of ~95%
                 with the test set. I used the play framework to make the model accessible via the internet and then HTML5 canvas to allow the user to draw images.
             </p>
 
@@ -80,6 +83,17 @@
             <p>
                 All the code is available <a href="https://github.com/vogon101/MachineLearning">here</a>
             </p>
+
+            <h3>I drew an X and it thought it was a Y</h3>
+
+            <p>
+                This model is not perfect, far from it. In fact, the whole point of this project is to show real machine learning
+                in action and this <i>includes</i> the failures. This model achives 80.2% accuracy on the MNIST test-set which meansit is pretty
+                good on that data but clearly it isnt that good here. The reason for this is because, despite my best attempts
+                to normalise the input, the format is not exactly the same as in the standard data-set. This shows the importance
+                of the right kind of training which is not always that easy.
+            </p>
+
         </div>
 
     </div>

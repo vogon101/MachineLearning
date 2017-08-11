@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="SBT: com.typesafe.play:twirl-api_2.11:1.1.1:jar">
+    <CLASSES>
+      <root url="jar://C:/Activator/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.typesafe.play/twirl-api_2.11/srcs/twirl-api_2.11-1.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
