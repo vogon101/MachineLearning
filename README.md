@@ -10,3 +10,6 @@ A collection of simple experiments with neural networks and statistical filters
     * MNIST Feedforward Network
 ### Web Machine Learning
 Source code for [learning.vogonjeltz.com](http://learning.vogonjeltz.com)
+
+### Evolving Creatures
+Experiments with evolution of tanks to fight and compete for resources
