@@ -1,6 +1,6 @@
 package com.vogonjeltz.machineInt.evoTanks.gfx
 
-import com.vogonjeltz.machineInt.evoTanks.physics.{Box, Circle, Shape}
+import com.vogonjeltz.machineInt.evoTanks.physics._
 import org.lwjgl.opengl.GL11._
 
 /**
@@ -10,67 +10,79 @@ import org.lwjgl.opengl.GL11._
   */
 object ShapeRenderer {
 
-  def render(shape: Shape, params: RenderParams = RenderParams()) = shape match {
-    case shape: Box => renderBox(shape, params)
-    case shape: Circle => renderCircle(shape, params)
-  }
+  //def renderBoxes(params: RenderParams)(shapes: Box*): Unit = renderBoxes(params, shapes)
 
-  def renderBox(shape: Box, params:RenderParams) = {
+  def renderBox(params:RenderParams, shape: Box): Unit = {
 
-    val frame: Frame = Frame(_colour = params.colour)
+    val frame: Frame = Frame(_colour = params.colour, _rotation = params.rotation, _position = params.offset)
 
-    if (params.filled) {
-      Render.withContext(frame) {
-        glBegin(GL_QUADS)
+    Render.withContext(frame, params.translate) {
+      glBegin(if (params.filled) GL_QUADS else GL_LINE_LOOP)
         Render.point(shape.topLeft)
         Render.point(shape.topRight)
         Render.point(shape.bottomRight)
         Render.point(shape.bottomLeft)
-        glEnd()
-      }
-    }
-    else {
-      Render.withContext(frame) {
-        glBegin(GL_LINE_LOOP)
-        Render.point(shape.topLeft)
-        Render.point(shape.topRight)
-        Render.point(shape.bottomRight)
-        Render.point(shape.bottomLeft)
-        glEnd()
-      }
+      glEnd()
     }
 
   }
 
-  def renderCircle(shape: Circle, params: RenderParams) = {
+  //def renderCircles(params: RenderParams)(circles: Circle*): Unit = renderCircles(params, circles)
+
+  def renderCircle(params: RenderParams, shape: Circle): Unit = {
     val CIRCLE_TRIANGLES = 20
-    val frame: Frame = Frame(shape.position, params.colour)
-    if (params.filled)
-      Render.withContext(frame) {
-        var x2, y2:Double = 0
-        glBegin(GL_TRIANGLE_FAN)
-        for (angle <- 0d to (2d * Math.PI) by (2d * Math.PI / CIRCLE_TRIANGLES)) {
-          x2 = Math.sin(angle)*shape.radius
-          y2 = Math.cos(angle)*shape.radius
-          glVertex2d(x2,y2)
-        }
+    val frame: Frame = Frame(_colour = params.colour, _rotation = params.rotation, _position = params.offset)
+
+    Render.withContext(frame, params.translate) {
+        glBegin(if (params.filled) GL_TRIANGLE_FAN else GL_LINE_LOOP)
+          for (angle <- 0d to (2d * Math.PI) by (2d * Math.PI / CIRCLE_TRIANGLES))
+            glVertex2d(
+              Math.sin(angle)*shape.radius + shape.position.x,
+              Math.cos(angle)*shape.radius + shape.position.y
+            )
         glEnd()
-      }
-    else
-      Render.withContext(frame) {
-        glBegin(GL_LINE_LOOP)
-        for(i <- 0 to 360 by 5){
-          val deginrad = i * Math.PI / 180
-          glVertex2d(Math.cos(deginrad) * shape.radius, Math.sin(deginrad) * shape.radius)
-        }
-        glEnd()
-      }
+    }
+  }
+
+  def renderLine(params: RenderParams, shape: LineSegment): Unit = {
+    val frame: Frame = Frame(_colour = params.colour, _rotation = params.rotation, _position = params.offset)
+    Render.withContext(frame, params.translate) {
+
+      glBegin(GL_LINES)
+      Render.point(shape.p1)
+      Render.point(shape.p2)
+      glEnd()
+
+    }
+  }
+
+  //def renderTriangles(params: RenderParams)(triangles: Triangle*): Unit = renderTriangles(params, triangles)
+
+  def renderTriangle(params: RenderParams, shape: Triangle): Unit = {
+
+    val frame: Frame = Frame(_colour = params.colour, _rotation = params.rotation, _position = params.offset)
+
+    Render.withContext(frame, params.translate) {
+      glBegin(if (params.filled) GL_TRIANGLES else GL_LINE_LOOP)
+        Render.point(shape.p1)
+        Render.point(shape.p2)
+        Render.point(shape.p3)
+      glEnd()
+    }
+
   }
 
 }
 
 case class RenderParams (
-                        filled: Boolean = false,
-                        colour: Colour = Colour.WHITE
-                        )
+  filled: Boolean = false,
+  colour: Colour = Colour.WHITE,
+  rotation: Rotation = Deg(0),
+  translate: Boolean = true,
+  offset: Vect = null
+) {
+
+
+
+}
 

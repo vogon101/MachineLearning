@@ -10,6 +10,7 @@ sealed abstract class Shape {
   def position: Vect
 
   //TODO: Refactor this??
+  //TODO: Triangles
   def intersects(that: Shape): Boolean = (this, that) match {
     case (c1: Circle, c2: Circle) => Shape.circleCircleIntersects(c1, c2)
 
@@ -68,9 +69,36 @@ object Shape {
     b1.topLeft.x <= b2.bottomRight.x && b1.bottomRight.x >= b2.topLeft.x &&
     b1.topLeft.y <= b2.bottomRight.y && b1.bottomRight.y >= b2.topLeft.y
 
-  def lineLineIntersects(l1: LineSegment, l2: LineSegment): Boolean = ???
+  def lineLineIntersects(l1: LineSegment, l2: LineSegment): Boolean = {
+    //TODO
+    val A1 = l1.p2.y - l1.p1.y
+    val B1 = l1.p1.x - l1.p2.x
+    val C1 = A1 * l1.p1.x + B1*l1.p1.y
 
-  def lineBoxIntersects(l1: LineSegment, b2: Box) : Boolean = ???
+    val A2 = l2.p2.y - l2.p1.y
+    val B2 = l2.p1.x - l2.p2.x
+    val C2 = A2 * l2.p1.x + B2*l2.p1.y
+
+    val det  = A1 * B2 - A2 * B1
+
+    if (det == 0) false
+    else {
+      val x = (B2 * C1 - B1 * C2) / det
+      val y = (A1 * C2 - A2 * C1) / det
+
+      x >= l1.minX && x <= l1.maxX && x >= l2.minX && x <= l2.maxX &&
+        y >= l1.minY && y <= l1.maxY && y >= l2.minY && y <= l2.maxY
+    }
+
+  }
+
+  def lineBoxIntersects(l1: LineSegment, b2: Box) : Boolean =
+    b2.contains(l1.p1)  ||
+    b2.contains(l1.p2)  ||
+    lineLineIntersects(l1, b2.A) ||
+    lineLineIntersects(l1, b2.B) ||
+    lineLineIntersects(l1, b2.C) ||
+    lineLineIntersects(l1, b2.D)
 
   def lineCircleIntersects(l1: LineSegment, c1: Circle) : Boolean = {
     //https://stackoverflow.com/a/1084899/2329773
@@ -126,6 +154,12 @@ case class LineSegment(p1: Vect, p2: Vect) extends Shape {
 
   override def position = p1 + (p2 - p1)/2
 
+  lazy val minX = List(p1.x, p2.x).min
+  lazy val maxX = List(p1.x, p2.x).max
+
+  lazy val minY = List(p1.y, p2.y).min
+  lazy val maxY = List(p1.y, p2.y).max
+
 }
 
 class Box(val xLength: Double, val yLength: Double, val position: Vect) extends Shape {
@@ -171,4 +205,11 @@ object Box {
       topLeft + Vect((bottomRight.x - topLeft.x) / 2, (bottomRight.y - topLeft.y) / 2)
     )
 
+}
+
+//TODO: Implement this
+case class Triangle(p1: Vect, p2: Vect, p3: Vect) extends Shape {
+  override def contains(p: Vect): Boolean = ???
+
+  override def position: Vect = p1
 }

@@ -1,6 +1,7 @@
 package com.vogonjeltz.machineInt.evoTanks.physics.collision
 
 import com.vogonjeltz.machineInt.evoTanks.core.SimulationObject
+import com.vogonjeltz.machineInt.evoTanks.physics.Shape
 
 import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 
@@ -13,9 +14,13 @@ abstract class CollisionManager[T <: Collideable] {
 
   def debugRender(): Unit = {}
 
+  def shape: Shape
+
 }
 
 class SimpleCollisionManager[T <: Collideable]() extends CollisionManager[T] {
+
+  def shape: Shape = ???
 
   override def calculateCollisions(objects: List[T]): (List[ObjectObjectCollision[T, T]], List[EdgeCollision[T]]) = {
     val collisions: ListBuffer[ObjectObjectCollision[T,T]] = ListBuffer()

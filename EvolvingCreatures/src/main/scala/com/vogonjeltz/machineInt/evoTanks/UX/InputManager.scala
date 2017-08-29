@@ -43,6 +43,10 @@ class InputManager {
       results.UPSDelta += 1
     }
 
+    while (Keyboard.next()) {
+      if (Keyboard.getEventKey == Keyboard.KEY_SPACE && Keyboard.getEventKeyState) results.didRemoveCap = true
+    }
+
     f(results)
 
   }
@@ -57,5 +61,7 @@ class InputResults {
   var zoomLevelDelta: Double = 0
 
   var UPSDelta: Int = 0
+
+  var didRemoveCap: Boolean = false
 
 }

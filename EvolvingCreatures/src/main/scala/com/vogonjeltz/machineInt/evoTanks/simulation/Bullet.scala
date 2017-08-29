@@ -1,7 +1,7 @@
 package com.vogonjeltz.machineInt.evoTanks.simulation
 
 import com.vogonjeltz.machineInt.evoTanks.core._
-import com.vogonjeltz.machineInt.evoTanks.gfx.ShapeRenderer
+import com.vogonjeltz.machineInt.evoTanks.gfx._
 import com.vogonjeltz.machineInt.evoTanks.physics.{Circle, Vect}
 
 /**
@@ -19,9 +19,11 @@ class Bullet(private var _position: Vect, val velocity: Vect, val shooter: Tank)
 
   private var age = 0
 
-  override def render(): Unit = {
-    ShapeRenderer.render(shape)
-  }
+  override def colour: Colour = Colour.CYAN
+
+  override def render(): Seq[RenderPrimitive] = List(
+    CircleRenderer(shape, RenderParams(colour = colour))
+  )
 
   override def update(): List[Action] = ActionAggregator().aggregate { implicit a =>
     age += 1
@@ -35,7 +37,11 @@ object Bullet {
 
   def killAction(b: Bullet, t: Tank): List[Action] = if (b.shooter == t) List() else List(
     RemoveObjectAction(t),
-    RemoveObjectAction(b)
+    RemoveObjectAction(b),
+    ResolvableAction { arena =>
+      b.shooter.didKill(t)
+      List()
+    }
   )
 
 }

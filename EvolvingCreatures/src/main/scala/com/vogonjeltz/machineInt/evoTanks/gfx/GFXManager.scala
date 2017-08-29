@@ -11,6 +11,8 @@ import org.lwjgl.opengl.{Display, DisplayMode}
   */
 class GFXManager(val displaySettings: DisplaySettings) {
 
+  //TODO: Implement render primitives so that rendering is "batched"
+
   val frameSync = new Sync[() => Unit, Boolean](displaySettings.fpsCap, (f: Option[() => Unit]) => doRender(f.get))
 
   def fps = frameSync.callsLastSecond

@@ -22,7 +22,14 @@ object Render {
   //TODO: Should the frame know about colour
   def withContext( frame: Frame, translate: Boolean = true )( actions: => Unit ): Unit = {
 
-    glPushMatrix()
+    if (
+      translate ||
+      frame.rotation.isDefined ||
+      frame.position.isDefined
+    ) {
+      glPushMatrix()
+    }
+
 
     val colourBuffer = BufferUtils.createFloatBuffer( 16 )
     glGetFloat( GL_CURRENT_COLOR, colourBuffer )
@@ -38,8 +45,42 @@ object Render {
 
     actions
 
-    glPopMatrix()
+    if (
+      translate ||
+      frame.rotation.isDefined ||
+      frame.position.isDefined
+    ) {
+      glPopMatrix()
+    }
+
+
     glColor3d( colourBuffer.get( 0 ).toDouble, colourBuffer.get( 1 ).toDouble, colourBuffer.get( 2 ).toDouble )
+
+  }
+
+  def withColour(c: Colour)( actions: => Unit): Unit = {
+
+    val colourBuffer = BufferUtils.createFloatBuffer( 16 )
+    glGetFloat( GL_CURRENT_COLOR, colourBuffer )
+
+    glColor3d(c.r, c.g, c.b)
+
+    actions
+
+    glColor3d( colourBuffer.get( 0 ).toDouble, colourBuffer.get( 1 ).toDouble, colourBuffer.get( 2 ).toDouble )
+
+  }
+
+  def withTranslate(actions: => Unit): Unit = {
+
+    glPushMatrix()
+
+    glTranslated(_offset.x, _offset.y, 0)
+    glScaled(zoom.x, zoom.y, 1)
+
+    actions
+
+    glPopMatrix()
 
   }
 

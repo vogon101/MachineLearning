@@ -87,7 +87,7 @@ class QuadTree[T <: Collideable](val shape: Box, val levels: Int, val root: Bool
         case _ => Colour.WHITE
       }
 
-      ShapeRenderer.render(quadTree.shape, RenderParams(colour = colour, filled = false))
+      ShapeRenderer.renderBox(RenderParams(colour = colour, filled = false), quadTree.shape)
       if (quadTree.levels > 0) quadTree.buckets.foreach(renderQT _)
 
     }

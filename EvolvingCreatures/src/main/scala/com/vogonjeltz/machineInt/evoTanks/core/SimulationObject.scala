@@ -1,6 +1,6 @@
 package com.vogonjeltz.machineInt.evoTanks.core
 
-import com.vogonjeltz.machineInt.evoTanks.gfx.Renderable
+import com.vogonjeltz.machineInt.evoTanks.gfx.{Colour, Renderable}
 import com.vogonjeltz.machineInt.evoTanks.physics.collision.Collideable
 
 /**
@@ -18,6 +18,8 @@ abstract class SimulationObject extends Collideable with Renderable {
     * @return
     */
   def update(): List[Action]
+
+  def colour: Colour = Colour.WHITE
 
 
 }

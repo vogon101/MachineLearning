@@ -5,6 +5,6 @@ package com.vogonjeltz.machineInt.evoTanks.gfx
   */
 trait Renderable {
 
-  def render(): Unit
+  def render(): Seq[RenderPrimitive]
 
 }

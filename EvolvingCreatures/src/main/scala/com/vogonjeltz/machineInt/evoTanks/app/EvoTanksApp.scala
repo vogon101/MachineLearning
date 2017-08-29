@@ -18,12 +18,10 @@ object EvoTanksApp extends App {
   val manager = new SimulationManager
   implicit val arena = manager.arena
 
-  for (i <- Range(0, 30)) {
-    val t1 = new Tank(Vect(Random.nextInt(5000), Random.nextInt(5000)))
-    t1._velocity = Vect(Random.nextDouble()*2 - 1, Random.nextDouble()*2 - 1)
 
-    manager.arena.objects.append(t1)
-  }
+  val l1 = LineSegment(Vect(0,0), Vect(100, 100))
+  val l2 = LineSegment(Vect(100,0), Vect(0, 100))
+  println(l1.intersects(l2))
 
   manager.run()
 
